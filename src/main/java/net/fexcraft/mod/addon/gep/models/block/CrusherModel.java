@@ -3,23 +3,18 @@ package net.fexcraft.mod.addon.gep.models.block;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 import org.lwjgl.opengl.GL11;
 
 import net.fexcraft.lib.common.Static;
 import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
-import net.fexcraft.mod.fvtm.data.block.BlockData;
 import net.fexcraft.mod.fvtm.data.block.CraftBlockScript;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
-import net.fexcraft.mod.fvtm.data.root.RenderCache;
 import net.fexcraft.mod.fvtm.model.BlockModel;
 import net.fexcraft.mod.fvtm.model.DefaultPrograms;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 
 /** This file was exported via the FVTM Exporter V1 of<br>
  *  FMT (Fex's Modelling Toolbox) v.1.0.4-test &copy; 2018 - Fexcraft.net<br>
@@ -33,7 +28,7 @@ public class CrusherModel extends BlockModel {
 		this.addToCreators("Ferdinand (FEX___96)");
 	    gui_scale_x = gui_scale_y = gui_scale_z = 0.125f;
 		//
-		TurboList chassis_body = new TurboList("chassis_body");
+		ModelGroup chassis_body = new ModelGroup("chassis_body");
 		chassis_body.add(new ModelRendererTurbo(chassis_body, 345, 1, textureX, textureY).addBox(0, 0, 0, 4, 48, 4)
 			.setRotationPoint(-22, -48, -22).setRotationAngle(0, 0, 0).setName("Box 4")
 		);
@@ -257,7 +252,7 @@ public class CrusherModel extends BlockModel {
 		);
 		this.groups.add(chassis_body);
 		//
-		TurboList chassis_primary = new TurboList("chassis_primary");
+		ModelGroup chassis_primary = new ModelGroup("chassis_primary");
 		chassis_primary.add(new ModelRendererTurbo(chassis_primary, 1, 1, textureX, textureY).addBox(0, 0, 0, 2, 16, 44)
 			.setRotationPoint(-24, -16, -22).setRotationAngle(0, 0, 0).setName("Box 0")
 		);
@@ -285,7 +280,7 @@ public class CrusherModel extends BlockModel {
 		chassis_primary.addProgram(DefaultPrograms.RGB_PRIMARY);
 		this.groups.add(chassis_primary);
 		//
-		TurboList rotable_gears = new TurboList("rotable_gears");
+		ModelGroup rotable_gears = new ModelGroup("rotable_gears");
 		rotable_gears.add(new ModelRendererTurbo(rotable_gears, 265, 33, textureX, textureY)
 			.addShapeBox(0.5f, -1.5f, 0, 1, 3, 16, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0)
 			.setRotationPoint(0, -24, -8).setRotationAngle(0, 0, 0).setName("Box 38")
@@ -763,15 +758,15 @@ public class CrusherModel extends BlockModel {
 		rotable_gears.add(new ModelRendererTurbo(rotable_gears, 345, 105, textureX, textureY).addBox(-0.5f, 0.8f, 0, 1, 1, 3)
 			.setRotationPoint(4, -32, -7).setRotationAngle(0, 0, -0.7853982f).setName("Box 212")
 		);
-		rotable_gears.addProgram(new TurboList.Program(){
+		rotable_gears.addProgram(new ModelGroup.Program(){
 			
 			@Override
-			public void preRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
-				if(tile == null || cache == null) return;
-				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
+			public void preRender(ModelGroup list, ModelRenderData data){
+				if(data.tile == null || data.cache == null) return;
+				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((CraftBlockScript)multidata.getScript()).getProcessed() > 0){
-			    	float rotation = cache.getValue("rot_state", 0f) + 1;
-			    	cache.setValue("rot_state", rotation > 360 ? 0 : rotation);
+			    	float rotation = data.cache.getValue("rot_state", 0f) + 1;
+			    	data.cache.setValue("rot_state", rotation > 360 ? 0 : rotation);
 			    	for(ModelRendererTurbo turbo : list){
 			    		turbo.rotationAngleZ += rotation;
 			    		turbo.render();
@@ -783,7 +778,7 @@ public class CrusherModel extends BlockModel {
 		});
 		this.groups.add(rotable_gears);
 		//
-		TurboList state = new TurboList("state");
+		ModelGroup state = new ModelGroup("state");
 		state.add(new ModelRendererTurbo(state, 25, 145, textureX, textureY).addBox(0, -0.5f, 0, 44, 1, 44)
 			.setRotationPoint(-22, 0, -22).setRotationAngle(0, 0, 0).setName("Box 218")
 		);
@@ -795,14 +790,14 @@ public class CrusherModel extends BlockModel {
 			.addShapeBox(0, -0.5f, 0, 12, 4, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4, 0, 0, 4, 0, 0, 4)
 			.setRotationPoint(-6, -4, -6).setRotationAngle(0, 0, 0).setName("Box 220")
 		);
-		state.addProgram(new TurboList.Program(){
+		state.addProgram(new ModelGroup.Program(){
 			
 			private int fullstate;
 			
 			@Override
-			public void preRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
-				if(tile == null || cache == null) return;
-				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
+			public void preRender(ModelGroup list, ModelRenderData data){
+				if(data.tile == null || data.cache == null) return;
+				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getInventory("output") != null){
 					List<ItemStack> stacks = multidata.getInventory("output");
 					fullstate = 0;
@@ -814,7 +809,7 @@ public class CrusherModel extends BlockModel {
 			}
 			
 			@Override
-			public void postRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void postRender(ModelGroup list, ModelRenderData data){
 		    	GL11.glTranslatef(0, Static.sixteenth * fullstate, 0);
 			}
 			
