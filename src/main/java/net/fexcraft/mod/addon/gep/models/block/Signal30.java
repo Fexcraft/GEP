@@ -4,7 +4,7 @@ import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.fvtm.model.BlockModel;
 import net.fexcraft.mod.fvtm.model.DefaultPrograms;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** Extracted from the StandardGauge Model
  * 
@@ -18,7 +18,7 @@ public class Signal30 extends BlockModel {
 		this.addToCreators("Ferdinand (FEX___96)");
 	    gui_scale_x = gui_scale_y = gui_scale_z = 0.5f;
 		//
-	    TurboList simple_signal_base = new TurboList("simple_signal_base");
+	    ModelGroup simple_signal_base = new ModelGroup("simple_signal_base");
 		simple_signal_base.add(new ModelRendererTurbo(simple_signal_base, 101, 0, textureX, textureY).addBox(0, 0, 0, 6, 12, 5)
 			.setRotationPoint(-3, -62, -2.5f).setRotationAngle(0, 0, 0)
 		);
@@ -42,14 +42,14 @@ public class Signal30 extends BlockModel {
 		);
 		this.groups.add(simple_signal_base);
 		//
-		TurboList simple_signal_stop = new TurboList("simple_signal_stop");
+		ModelGroup simple_signal_stop = new ModelGroup("simple_signal_stop");
 		simple_signal_stop.add(new ModelRendererTurbo(simple_signal_stop, 54, 0, textureX, textureY).addCylinder(0, 0, 0, 2, 2, 16, 1, 1, 1, null)
 			.setRotationPoint(0, -59, -3).setRotationAngle(0, 0, 0)
 		);
 		simple_signal_stop.addProgram(DefaultPrograms.BASIC_SIGNAL_STOP);
 		this.groups.add(simple_signal_stop);
 		//
-		TurboList simple_signal_clear = new TurboList("simple_signal_clear");
+		ModelGroup simple_signal_clear = new ModelGroup("simple_signal_clear");
 		simple_signal_clear.add(new ModelRendererTurbo(simple_signal_clear, 63, 0, textureX, textureY).addCylinder(0, 0, 0, 2, 2, 16, 1, 1, 1, null)
 			.setRotationPoint(0, -53, -3).setRotationAngle(0, 0, 0)
 		);
