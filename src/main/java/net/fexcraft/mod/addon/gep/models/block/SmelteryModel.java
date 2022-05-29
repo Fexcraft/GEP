@@ -12,7 +12,7 @@ import net.fexcraft.mod.fvtm.data.block.BlockData;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
 import net.fexcraft.mod.fvtm.data.root.RenderCache;
 import net.fexcraft.mod.fvtm.model.BlockModel;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumParticleTypes;
 
@@ -28,7 +28,7 @@ public class SmelteryModel extends BlockModel {
 		this.addToCreators("Ferdinand (FEX___96)");
 	    gui_scale_x = gui_scale_y = gui_scale_z = 0.125f;
 		//
-		TurboList body = new TurboList("body");
+		ModelGroup body = new ModelGroup("body");
 		body.add(new ModelRendererTurbo(body, 1, 1, textureX, textureY).addBox(-24, 0, -24, 48, 4, 48)
 			.setRotationPoint(0, -4, 0).setRotationAngle(0, 0, 0).setName("Box 0")
 		);
@@ -181,10 +181,10 @@ public class SmelteryModel extends BlockModel {
 			.setRotationPoint(-21, -36, -25).setRotationAngle(0, 0, 0).setName("Box 54")
 		);
 		body.add(new ModelRendererTurbo(body, 0, 0, textureX, textureY).addBox(0, 0, 0, 1, 1, 1).setName("Box 56"));
-		body.addProgram(new TurboList.Program(){
+		body.addProgram(new ModelGroup.Program(){
 			
 			@Override
-			public void preRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
 				if(tile == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
 				if(multidata == null || multidata.getScript() == null) return;
@@ -201,7 +201,7 @@ public class SmelteryModel extends BlockModel {
 		});
 		this.groups.add(body);
 		//
-		TurboList door_right = new TurboList("door_right");
+		ModelGroup door_right = new ModelGroup("door_right");
 		door_right.add(new ModelRendererTurbo(door_right, 1, 57, textureX, textureY)
 			.addShapeBox(0, 0, -21, 12, 12, 1, 0, 0, 0, 0, 0, 0, -4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 4, 0, 0, 0)
 			.setRotationPoint(0, -32, 0).setRotationAngle(0, 0, 0).setName("Box 33")
@@ -210,12 +210,12 @@ public class SmelteryModel extends BlockModel {
 			.addShapeBox(12, 0, -17, 9, 12, 1, 0, 0, 0, 0, 0, 0, -9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, -9, 0, 0, 9, 0, 0, 0)
 			.setRotationPoint(0, -32, 0).setRotationAngle(0, 0, 0).setName("Box 34")
 		);
-		door_right.addProgram(new TurboList.Program(){
+		door_right.addProgram(new ModelGroup.Program(){
 			
 			private boolean wasopen;
 
 			@Override
-			public void preRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
 				if(tile == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((SmelteryScript)multidata.getScript()).isOpen()){
@@ -225,7 +225,7 @@ public class SmelteryModel extends BlockModel {
 			}
 
 			@Override
-			public void postRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void postRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
 				if(wasopen){
 					list.rotate(0, 0, 0, true);
 					wasopen = false;
@@ -235,7 +235,7 @@ public class SmelteryModel extends BlockModel {
 		});
 		this.groups.add(door_right);
 		//
-		TurboList door_left = new TurboList("door_left");
+		ModelGroup door_left = new ModelGroup("door_left");
 		door_left.add(new ModelRendererTurbo(door_left, 1, 73, textureX, textureY)
 			.addShapeBox(-12, 0, -21, 12, 12, 1, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, 0, 4)
 			.setRotationPoint(0, -32, 0).setRotationAngle(0, 0, 0).setName("Box 38")
@@ -244,12 +244,12 @@ public class SmelteryModel extends BlockModel {
 			.addShapeBox(-21, 0, -17, 9, 12, 1, 0, 0, 0, -9, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, -9, 0, 0, 0, 0, 0, 0, 0, 0, 9)
 			.setRotationPoint(0, -32, 0).setRotationAngle(0, 0, 0).setName("Box 39")
 		);
-		door_left.addProgram(new TurboList.Program(){
+		door_left.addProgram(new ModelGroup.Program(){
 			
 			private boolean wasopen;
 
 			@Override
-			public void preRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
 				if(tile == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((SmelteryScript)multidata.getScript()).isOpen()){
@@ -259,7 +259,7 @@ public class SmelteryModel extends BlockModel {
 			}
 
 			@Override
-			public void postRender(TurboList list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void postRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
 				if(wasopen){
 					list.rotate(0, 0, 0, true);
 					wasopen = false;
@@ -269,7 +269,7 @@ public class SmelteryModel extends BlockModel {
 		});
 		this.groups.add(door_left);
 		//
-		TurboList bars = new TurboList("bars");
+		ModelGroup bars = new ModelGroup("bars");
 		bars.add(new ModelRendererTurbo(bars, 265, 1, textureX, textureY).addBox(0, 0, 0, 4, 2, 2)
 			.setRotationPoint(-6, -15, -26).setRotationAngle(0, 0, 0).setName("Box 40")
 		);
