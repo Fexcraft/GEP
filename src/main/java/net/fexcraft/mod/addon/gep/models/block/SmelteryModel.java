@@ -1,19 +1,14 @@
 //FMT-Marker FVTM-1.4
 package net.fexcraft.mod.addon.gep.models.block;
 
-import javax.annotation.Nullable;
-
 import net.fexcraft.lib.common.Static;
 import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.addon.gep.scripts.SmelteryScript;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
-import net.fexcraft.mod.fvtm.data.block.BlockData;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
-import net.fexcraft.mod.fvtm.data.root.RenderCache;
 import net.fexcraft.mod.fvtm.model.BlockModel;
 import net.fexcraft.mod.fvtm.model.ModelGroup;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumParticleTypes;
 
 /** This file was exported via the FVTM Exporter V1.4 of<br>
@@ -184,17 +179,17 @@ public class SmelteryModel extends BlockModel {
 		body.addProgram(new ModelGroup.Program(){
 			
 			@Override
-			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
-				if(tile == null) return;
-				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
+			public void preRender(ModelGroup list, ModelRenderData data){
+				if(data.tile == null) return;
+				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata == null || multidata.getScript() == null) return;
 				float random = Static.random.nextFloat();
 				if(random > 0.5f) random -= 1f;
-	            double x = (double)tile.getPos().getX() + 0.5D + random;
-	            double z = (double)tile.getPos().getZ() + 0.5D + random;
-                tile.getWorld().spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x, tile.getPos().getY() + 5.5, z, 0.0D, 0.0D, 0.0D);
+	            double x = data.tile.getPos().getX() + 0.5D + random;
+	            double z = data.tile.getPos().getZ() + 0.5D + random;
+                data.tile.getWorld().spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x, data.tile.getPos().getY() + 5.5, z, 0.0D, 0.0D, 0.0D);
                 if(((SmelteryScript)multidata.getScript()).isOpen()){
-                	tile.getWorld().spawnParticle(EnumParticleTypes.SMOKE_LARGE, x, tile.getPos().getY() + 4.5, z, 0.0D, 0.0D, 0.0D);
+                	data.tile.getWorld().spawnParticle(EnumParticleTypes.SMOKE_LARGE, x, data.tile.getPos().getY() + 4.5, z, 0.0D, 0.0D, 0.0D);
                 }
 			}
 			
@@ -215,9 +210,9 @@ public class SmelteryModel extends BlockModel {
 			private boolean wasopen;
 
 			@Override
-			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
-				if(tile == null) return;
-				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
+			public void preRender(ModelGroup list, ModelRenderData data){
+				if(data.tile == null) return;
+				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((SmelteryScript)multidata.getScript()).isOpen()){
 					list.rotate(0, -45, 0, true);
 					wasopen = true;
@@ -225,7 +220,7 @@ public class SmelteryModel extends BlockModel {
 			}
 
 			@Override
-			public void postRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void postRender(ModelGroup list, ModelRenderData data){
 				if(wasopen){
 					list.rotate(0, 0, 0, true);
 					wasopen = false;
@@ -249,9 +244,9 @@ public class SmelteryModel extends BlockModel {
 			private boolean wasopen;
 
 			@Override
-			public void preRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
-				if(tile == null) return;
-				MultiBlockData multidata = ((MultiblockTickableTE)tile).getMultiBlockData();
+			public void preRender(ModelGroup list, ModelRenderData data){
+				if(data.tile == null) return;
+				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((SmelteryScript)multidata.getScript()).isOpen()){
 					list.rotate(0, 45, 0, true);
 					wasopen = true;
@@ -259,7 +254,7 @@ public class SmelteryModel extends BlockModel {
 			}
 
 			@Override
-			public void postRender(ModelGroup list, @Nullable TileEntity tile, BlockData data, @Nullable RenderCache cache){
+			public void postRender(ModelGroup list, ModelRenderData data){
 				if(wasopen){
 					list.rotate(0, 0, 0, true);
 					wasopen = false;
