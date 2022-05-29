@@ -5,7 +5,7 @@ import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.fvtm.model.DefaultPrograms;
 import net.fexcraft.mod.fvtm.model.PartModel;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** This file was exported via the FVTM Exporter v1.5 of<br>
  *  FMT (Fex's Modelling Toolbox) v.2.6.5 &copy; 2021 - Fexcraft.net<br>
@@ -18,7 +18,7 @@ public class License_Plate_12x3_GenericModel extends PartModel {
 		super(); textureX = 8; textureY = 8;
 		this.addToCreators("Ferdinand");
 		//
-		TurboList group0 = new TurboList("group0");
+		ModelGroup group0 = new ModelGroup("group0");
 		group0.add(new ModelRendererTurbo(group0, 0, 0, textureX, textureY).newBoxBuilder()
 			.setOffset(0, 0, 0).setSize(0.05f, 3, 4)
 			.setPolygonUV(1, new float[]{ 4.0f, 3.0f, 8.0f, 6.0f })
