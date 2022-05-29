@@ -7,7 +7,7 @@ import net.fexcraft.lib.tmt.RotationOrder;
 import net.fexcraft.mod.fvtm.model.BlockModel;
 import net.fexcraft.mod.fvtm.model.ConditionalPrograms;
 import net.fexcraft.mod.fvtm.model.DefaultPrograms;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** This file was exported via the FVTM Exporter v1.5 of<br>
  *  FMT (Fex's Modelling Toolbox) v.2.6.5 &copy; 2021 - Fexcraft.net<br>
@@ -21,7 +21,7 @@ public class SimpleSwitchFork2Model extends BlockModel {
 		this.addToCreators("Ferdinand (FEX___96)");
 	    gui_scale_x = gui_scale_y = gui_scale_z = 0.5f;
 		//
-		TurboList base = new TurboList("base");
+		ModelGroup base = new ModelGroup("base");
 		base.add(new ModelRendererTurbo(base, 0, 6, textureX, textureY).addCylinder(0, 0, 0, 2, 2, 16, 1, 1, 1, null)
 			.setRotationPoint(0, -1, -1).setRotationAngle(0, 0, -90)
 		);
@@ -31,7 +31,7 @@ public class SimpleSwitchFork2Model extends BlockModel {
 		);
 		this.groups.add(base);
 		//
-		TurboList lever = new TurboList("lever");
+		ModelGroup lever = new ModelGroup("lever");
 		lever.add(new ModelRendererTurbo(lever, 9, 6, textureX, textureY).addBox(-0.25f, -8, -0.25f, 0.5f, 8, 0.5f)
 			.setRotationPoint(0, -1, 0).setRotationAngle(0, 0, 0)
 		);
@@ -40,7 +40,7 @@ public class SimpleSwitchFork2Model extends BlockModel {
 			.addElse(new DefaultPrograms.RotationSetter(2, -20, 0, true)));
 		this.groups.add(lever);
 		//
-		TurboList sign = new TurboList("sign");
+		ModelGroup sign = new ModelGroup("sign");
 		sign.add(new ModelRendererTurbo(sign, 14, 6, textureX, textureY).addBox(-0.2f, -11, -1.5f, 0.4f, 3, 3)
 			.setRotationPoint(0, -1, 0).setRotationAngle(0, 0, 0).setRotationOrder(RotationOrder.ZYX)
 		);
