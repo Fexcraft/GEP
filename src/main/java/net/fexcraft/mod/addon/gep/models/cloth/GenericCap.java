@@ -4,7 +4,7 @@ package net.fexcraft.mod.addon.gep.models.cloth;
 import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.fvtm.model.ClothModel;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** This file was exported via the FVTM Exporter v1.5 of<br>
  *  FMT (Fex's Modelling Toolbox) v.2.6.5 &copy; 2021 - Fexcraft.net<br>
@@ -17,7 +17,7 @@ public class GenericCap extends ClothModel {
 		super(); textureX = 64; textureY = 32;
 		this.addToCreators("Ferdinand (FEX___96)");
 		//
-		TurboList cap = new TurboList("cap");
+		ModelGroup cap = new ModelGroup("cap");
 		cap.add(new ModelRendererTurbo(cap, 0, 0, textureX, textureY)
 			.addShapeBox(0, 0, 0, 5, 0.5f, 10, 0, 0, 0, -0.1f, 0, 0, -0.6f, 0, 0, -0.6f, 0, 0, -0.1f, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0)
 			.setRotationPoint(2, -31.5f, -5).setRotationAngle(0, 0, 0)
