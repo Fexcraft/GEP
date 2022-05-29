@@ -7,7 +7,7 @@ import net.fexcraft.lib.tmt.RotationOrder;
 import net.fexcraft.mod.fvtm.model.BlockModel;
 import net.fexcraft.mod.fvtm.model.ConditionalPrograms;
 import net.fexcraft.mod.fvtm.model.DefaultPrograms;
-import net.fexcraft.mod.fvtm.model.TurboList;
+import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** This file was exported via the FVTM Exporter v1.5 of<br>
  *  FMT (Fex's Modelling Toolbox) v.2.6.5 &copy; 2021 - Fexcraft.net<br>
@@ -20,7 +20,7 @@ public class SimpleSwitchFork3Model extends BlockModel {
 		super(); textureX = 32; textureY = 32;
 		this.addToCreators("Ferdinand (FEX___96)");
 		//
-		TurboList base = new TurboList("base");
+		ModelGroup base = new ModelGroup("base");
 		base.add(new ModelRendererTurbo(base, 0, 6, textureX, textureY).addCylinder(0, 0, 0, 2, 2, 16, 1, 1, 1, null)
 			.setRotationPoint(0, -1, 1).setRotationAngle(0, 0, -90)
 		);
@@ -37,7 +37,7 @@ public class SimpleSwitchFork3Model extends BlockModel {
 		);
 		this.groups.add(base);
 		//
-		TurboList lever0 = new TurboList("lever0");
+		ModelGroup lever0 = new ModelGroup("lever0");
 		lever0.add(new ModelRendererTurbo(lever0, 9, 6, textureX, textureY).addBox(-0.25f, -8, -0.25f, 0.5f, 8, 0.5f)
 			.setRotationPoint(0, -1, 2).setRotationAngle(0, 0, 16)
 		);
@@ -45,7 +45,7 @@ public class SimpleSwitchFork3Model extends BlockModel {
 			.add(new DefaultPrograms.RotationSetter(2, 20, 0, true)));
 		this.groups.add(lever0);
 		//
-		TurboList sign0 = new TurboList("sign0");
+		ModelGroup sign0 = new ModelGroup("sign0");
 		sign0.add(new ModelRendererTurbo(sign0, 14, 6, textureX, textureY).addBox(-0.2f, -11, -1.5f, 0.4f, 3, 3)
 			.setRotationPoint(0, -1, 2).setRotationAngle(0, 0, 16).setRotationOrder(RotationOrder.ZYX)
 		);
@@ -57,7 +57,7 @@ public class SimpleSwitchFork3Model extends BlockModel {
 			.add(new DefaultPrograms.RotationSetter(1, 90, 0, true)));
 		this.groups.add(sign0);
 		//
-		TurboList lever1 = new TurboList("lever1");
+		ModelGroup lever1 = new ModelGroup("lever1");
 		lever1.add(new ModelRendererTurbo(lever1, 9, 22, textureX, textureY).addBox(-0.25f, -8, -0.25f, 0.5f, 8, 0.5f)
 			.setRotationPoint(0, -1, -2).setRotationAngle(0, 0, -16)
 		);
@@ -65,7 +65,7 @@ public class SimpleSwitchFork3Model extends BlockModel {
 			.add(new DefaultPrograms.RotationSetter(2, -20, 0, true)));
 		this.groups.add(lever1);
 		//
-		TurboList sign1 = new TurboList("sign1");
+		ModelGroup sign1 = new ModelGroup("sign1");
 		sign1.add(new ModelRendererTurbo(sign1, 14, 22, textureX, textureY).addBox(-0.2f, -11, -1.5f, 0.4f, 3, 3)
 			.setRotationPoint(0, -1, -2).setRotationAngle(0, 0, -16).setRotationOrder(RotationOrder.ZYX)
 		);
