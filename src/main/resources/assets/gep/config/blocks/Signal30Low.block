@@ -2,7 +2,14 @@
     "RegistryName": "gep:signal_30_low",
     "Addon": "fvtm:gep",
     "Name": "Signal for 30px Standard Gauge",
-    "Model": "gep:models/block/signal_30_low",
+    "Model": "gep:models/block/signal_30_low.fmf",
+    "ModelData":{
+		"Programs":[
+			"simple_signal_stop fvtm:basic_signal_stop",
+			"simple_signal_clear fvtm:basic_signal_clear"
+		],
+		"ItemScale": 0.5
+	},
     "Texture": "fvtm:textures/blocks/30px_standard_gauge.png",
     "BlockType": "SIGNAL_16ROT",
     "AABBs":{

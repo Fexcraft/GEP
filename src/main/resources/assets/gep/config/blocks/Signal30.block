@@ -2,7 +2,7 @@
     "RegistryName": "gep:signal_30",
     "Addon": "fvtm:gep",
     "Name": "Signal for 30px Standard Gauge",
-    "Model": "gep:models/block/signal_30",
+    "Model": "gep:models/block/signal_30.fmf",
     "ModelData":{
 		"Programs":[
 			"simple_signal_stop fvtm:basic_signal_stop",
