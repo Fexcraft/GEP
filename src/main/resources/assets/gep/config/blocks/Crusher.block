@@ -1,7 +1,15 @@
 {
 	"RegistryName": "gep:crusher",
 	"Addon": "fvtm:gep",
-	"Model": "gep:models/block/crusher",
+	"Model": "gep:models/block/crusher.fmf",
+    "ModelData":{
+		"Programs":[
+			"chassis_primary fvtm:rgb_primary",
+			"rotable_gears gep:crusher_gears",
+			"state gep:crusher_fillstate"
+		],
+		"ItemScale": 0.125
+	},
 	"Name": "3³ Rock Crusher",
     "Description": "&7The former &2HCP &cCrusher",
 	"Texture": "gep:textures/blocks/crusher.png",
