@@ -2,7 +2,7 @@
     "RegistryName": "gep:license_plate_12x3_generic",
     "Addon": "fvtm:gep",
     "Name": "Generic License Plate (12x3)",
-    "Model": "gep:models/part/lp_12x3_generic",
+    "Model": "gep:models/part/lp_12x3_generic.fmf",
     "Category": [ "license_plate_12x3", "license_plate" ],
     "Textures": [
     	"Blank;gep:textures/parts/lp_12x3_g_blank.png",
