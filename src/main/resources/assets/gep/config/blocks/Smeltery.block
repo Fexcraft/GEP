@@ -3,7 +3,14 @@
     "Addon": "fvtm:gep",
     "Name": "Smeltery",
     "Description": "&7The classic &2GEP &cSmeltery",
-    "Model": "gep:models/block/smeltery",
+    "Model": "gep:models/block/smeltery.fmf",
+    "ModelData":{
+		"Programs":[
+			"door_right gep:smeltery_doors -45",
+			"door_left gep:smeltery_doors 45"
+		],
+		"ItemScale": 0.125
+	},
     "Texture": "gep:textures/blocks/smeltery.png",
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
