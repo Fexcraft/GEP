@@ -8,5 +8,9 @@
     "EquipmentSlot": "head",
     "ClothMaterial": "gep:cap",
     "Texture": "gep:textures/clothes/cap.png",
-    "Model": "gep:models/cloth/cap"
+    "Model": "gep:models/cloth/cap.fmf",
+    "ModelData":{
+		"SetGroupAs": "cap head 0 25 0",
+		"ItemScale": 0.125
+	}
 }
