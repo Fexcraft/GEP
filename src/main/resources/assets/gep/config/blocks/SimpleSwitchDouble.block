@@ -2,7 +2,57 @@
     "RegistryName": "gep:switch_simple_double",
     "Addon": "fvtm:gep",
     "Name": "Simple Switch (Double)",
-    "Model": "gep:models/block/simple_switch_double",
+    "Model": "gep:models/block/simple_switch_double.fmf",
+    "ModelData":{
+		"CondPrograms":[
+			{
+				"id": "fvtm:switch_double_state_side",
+				"group": "lever0",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"args": "false true"
+			},
+			{
+				"id": "fvtm:switch_double_state_side",
+				"group": "sign0",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true",
+					"fvtm:rotation_setter 1 90 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"args": "false true"
+			},
+			{
+				"id": "fvtm:switch_double_state_side",
+				"group": "lever1",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"args": "true true"
+			},
+			{
+				"id": "fvtm:switch_double_state_side",
+				"group": "sign1",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true",
+					"fvtm:rotation_setter 1 0 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"args": "true true"
+			}
+		]
+	},
     "Texture": "gep:textures/blocks/simple_switch_double.png",
     "BlockType": "DOUBLE_SWITCH_4ROT",
     "AABBs":{
