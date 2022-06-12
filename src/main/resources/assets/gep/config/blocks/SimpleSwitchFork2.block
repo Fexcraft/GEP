@@ -3,6 +3,31 @@
     "Addon": "fvtm:gep",
     "Name": "Simple Switch (Fork 2)",
     "Model": "gep:models/block/simple_switch_fork2",
+    "ModelData":{
+		"CondPrograms":[
+			{
+				"id": "fvtm:switch_fork2_state",
+				"group": "lever",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				]
+			},
+			{
+				"id": "fvtm:switch_fork2_state",
+				"group": "sign",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true",
+					"fvtm:rotation_setter 1 0 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				]
+			}
+		]
+	},
     "Texture": "gep:textures/blocks/simple_switch_fork2.png",
     "BlockType": "FORK2_SWITCH_4ROT",
     "AABBs":{
