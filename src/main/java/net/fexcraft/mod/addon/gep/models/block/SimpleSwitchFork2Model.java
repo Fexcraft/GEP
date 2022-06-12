@@ -5,8 +5,6 @@ import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.lib.tmt.RotationOrder;
 import net.fexcraft.mod.fvtm.model.BlockModel;
-import net.fexcraft.mod.fvtm.model.ConditionalPrograms;
-import net.fexcraft.mod.fvtm.model.DefaultPrograms;
 import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 /** This file was exported via the FVTM Exporter v1.5 of<br>
@@ -35,9 +33,6 @@ public class SimpleSwitchFork2Model extends BlockModel {
 		lever.add(new ModelRendererTurbo(lever, 9, 6, textureX, textureY).addBox(-0.25f, -8, -0.25f, 0.5f, 8, 0.5f)
 			.setRotationPoint(0, -1, 0).setRotationAngle(0, 0, 0)
 		);
-		lever.addProgram(new ConditionalPrograms.SwitchFork2State()
-			.add(new DefaultPrograms.RotationSetter(2, 20, 0, true))
-			.addElse(new DefaultPrograms.RotationSetter(2, -20, 0, true)));
 		this.groups.add(lever);
 		//
 		ModelGroup sign = new ModelGroup("sign");
@@ -47,10 +42,6 @@ public class SimpleSwitchFork2Model extends BlockModel {
 		sign.add(new ModelRendererTurbo(sign, 23, 6, textureX, textureY).addBox(-1.5f, -11, -0.2f, 3, 3, 0.4f)
 			.setRotationPoint(0, -1, 0).setRotationAngle(0, 0, 0).setRotationOrder(RotationOrder.ZYX)
 		);
-		sign.addPrograms(new ConditionalPrograms.SwitchFork2State()
-			.add(new DefaultPrograms.RotationSetter(2, 20, 0, true))
-			.add(new DefaultPrograms.RotationSetter(1, 90, 0, true))
-			.addElse(new DefaultPrograms.RotationSetter(2, -20, 0, true)));
 		this.groups.add(sign);
 		//
 	}
