@@ -2,7 +2,7 @@
     "RegistryName": "gep:switch_simple_fork2",
     "Addon": "fvtm:gep",
     "Name": "Simple Switch (Fork 2)",
-    "Model": "gep:models/block/simple_switch_fork2",
+    "Model": "gep:models/block/simple_switch_fork2.fmf",
     "ModelData":{
 		"CondPrograms":[
 			{
