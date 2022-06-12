@@ -11,6 +11,9 @@
 				"ifmet":[
 					"fvtm:rotation_setter 2 20 0 true"
 				],
+				"else":[
+					"fvtm:rotation_setter 2 0 0 true"
+				],
 				"args": "0"
 			},
 			{
@@ -20,6 +23,9 @@
 					"fvtm:rotation_setter 2 20 0 true",
 					"#fvtm:rotation_setter 1 90 0 true"
 				],
+				"else":[
+					"fvtm:rotation_setter 2 0 0 true"
+				],
 				"args": "0"
 			},
 			{
@@ -27,6 +33,9 @@
 				"group": "lever1",
 				"ifmet":[
 					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 0 0 true"
 				],
 				"args": "2"
 			},
@@ -36,6 +45,9 @@
 				"ifmet":[
 					"fvtm:rotation_setter 2 -20 0 true",
 					"#fvtm:rotation_setter 1 90 0 true"
+				],
+				"else":[
+					"fvtm:rotation_setter 2 0 0 true"
 				],
 				"args": "2"
 			}
