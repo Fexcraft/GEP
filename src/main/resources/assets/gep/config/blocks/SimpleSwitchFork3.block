@@ -18,7 +18,7 @@
 				"group": "sign0",
 				"ifmet":[
 					"fvtm:rotation_setter 2 20 0 true",
-					"fvtm:rotation_setter 1 90 0 true"
+					"#fvtm:rotation_setter 1 90 0 true"
 				],
 				"args": "0"
 			},
@@ -35,7 +35,7 @@
 				"group": "sign1",
 				"ifmet":[
 					"fvtm:rotation_setter 2 -20 0 true",
-					"fvtm:rotation_setter 1 90 0 true"
+					"#fvtm:rotation_setter 1 90 0 true"
 				],
 				"args": "2"
 			}
