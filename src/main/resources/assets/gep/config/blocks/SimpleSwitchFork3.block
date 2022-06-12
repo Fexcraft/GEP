@@ -2,7 +2,45 @@
     "RegistryName": "gep:switch_simple_fork3",
     "Addon": "fvtm:gep",
     "Name": "Simple Switch (Fork 3)",
-    "Model": "gep:models/block/simple_switch_fork3",
+    "Model": "gep:models/block/simple_switch_fork3.fmf",
+    "ModelData":{
+		"CondPrograms":[
+			{
+				"id": "fvtm:switch_fork3_state",
+				"group": "lever0",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true"
+				],
+				"args": "0"
+			},
+			{
+				"id": "fvtm:switch_fork3_state",
+				"group": "sign0",
+				"ifmet":[
+					"fvtm:rotation_setter 2 20 0 true",
+					"fvtm:rotation_setter 1 90 0 true"
+				],
+				"args": "0"
+			},
+			{
+				"id": "fvtm:switch_fork3_state",
+				"group": "lever1",
+				"ifmet":[
+					"fvtm:rotation_setter 2 -20 0 true"
+				],
+				"args": "2"
+			},
+			{
+				"id": "fvtm:switch_fork3_state",
+				"group": "sign1",
+				"ifmet":[
+					"fvtm:rotation_setter 2 -20 0 true",
+					"fvtm:rotation_setter 1 90 0 true"
+				],
+				"args": "2"
+			}
+		]
+	},
     "Texture": "gep:textures/blocks/simple_switch_fork3.png",
     "BlockType": "FORK3_SWITCH_4ROT",
     "AABBs":{
