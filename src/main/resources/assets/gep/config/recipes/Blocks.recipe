@@ -1,0 +1,32 @@
+#override
+
+# fcl:bpt @ gep.recipes.machines
+@in
+item stonebrick*9
+item iron_block*2
+item brick_block*12
+item iron_ingot*2
+item stone*2
+@out
+item gep:smeltery
+
+// alternative recipe using bricks instead of brick blocks
+# fcl:bpt @ gep.recipes.machines
+@in
+item stonebrick*9
+item iron_block*2
+item brick*48
+item iron_ingot*2
+item stone*2
+@out
+item gep:smeltery
+
+# fcl:bpt @ gep.recipes.machines
+@in
+item iron_block
+item iron_ingot*8
+item planks*8
+item log*2
+item diamond*2
+@out
+item gep:crusher
