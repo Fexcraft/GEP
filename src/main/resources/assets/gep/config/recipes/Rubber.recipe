@@ -1,0 +1,13 @@
+// recipes to craft gep:rubber
+
+# fcl:bpt @ gep.recipes.materials
+@in
+item slime_ball*4
+@out
+item gep:rubber*2
+
+# gep:smeltery @ slime_to_rubber
+@in input
+item slime_ball*4
+@out output
+item gep:rubber*2
