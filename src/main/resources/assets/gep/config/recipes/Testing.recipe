@@ -1,0 +1,34 @@
+// testing recipes
+
+# gep:smeltery @ testing_glue
+@in input
+item slime_ball
+@out output
+item gep:glue
+consume heat 5
+time 100
+
+# itemgroup @ test_planks
+item planks 0
+item planks 1
+item planks 2
+item planks 3
+item planks 4
+item planks 5
+
+# itemgroup @ test_logs
+item log 0
+item log 1
+item log 2
+item log 3
+item log2 0
+item log2 1
+
+# gep:smeltery @ testing_burnable
+@in input
+group test_planks*2
+group test_logs
+@out tank
+fluid lava*100
+overflow
+time 20
