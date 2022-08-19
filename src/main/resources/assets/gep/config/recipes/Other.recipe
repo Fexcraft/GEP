@@ -5,7 +5,7 @@
 item leather*5
 item paper*1
 @out
-gep:cap
+item gep:cap
 
 # fcl:bpt @ gep.recipes.car_parts
 @in
