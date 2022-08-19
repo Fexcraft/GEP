@@ -1,0 +1,45 @@
+//recipes for the Crusher block
+
+# gep:crusher @ stone_to_cobble
+@in input
+oredict stone*4
+@out output
+item cobblestone*4
+
+# gep:crusher @ cobble_to_gravel
+@in input
+oredict cobblestone*4
+@out output
+item gravel*6
+
+# gep:crusher @ gravel_to_sand
+@in input
+oredict gravel*4
+@out output
+item sand*6
+
+# gep:crusher @ raw_andensite
+@in input
+item stone 6
+@out output
+item stone*3 5
+
+# gep:crusher @ raw_diorite
+@in input
+item stone 4
+@out output
+item stone*3 3
+
+# gep:crusher @ raw_granite
+@in input
+item stone 2
+@out output
+item stone*3 1
+
+# gep:crusher @ podzol_0
+@in input
+oredict dirt*3
+item leaves*2 1
+item log*1 1
+@out output
+item dirt*4 2
