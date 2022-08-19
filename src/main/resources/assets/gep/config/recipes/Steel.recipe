@@ -1,0 +1,16 @@
+// steel recipes
+
+# gep:smeltery @ steel_0
+@in input
+oredict ingotIron*4
+item coal
+@out output
+item gep:steel_ingot*4
+
+
+# gep:smeltery @ steel_1
+@in input
+oredict ironIngot * 8
+item coal * 2
+@out output
+item gep:steel_ingot * 8
