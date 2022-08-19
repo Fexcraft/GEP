@@ -1,0 +1,23 @@
+#override
+// rail recipes
+
+# fcl:bpt @ gep.recipes.rails
+@in
+item gep:steel_ingot*4
+item log*2
+@out
+item fvtm:standard*4
+
+# fcl:bpt @ gep.recipes.rails
+@in
+item gep:steel_ingot*32
+item log*16
+@out
+item fvtm:standard.8_straight
+
+# fcl:bpt @ gep.recipes.rails
+@in
+item gep:steel_ingot*64
+item log*32
+@out
+item fvtm:standard.16_straight

@@ -1,0 +1,21 @@
+// other recipes
+
+# fcl:bpt @ gep.recipes.clothes
+@in
+item leather*5
+item paper*1
+@out
+gep:cap
+
+# fcl:bpt @ gep.recipes.car_parts
+@in
+item iron_ingot
+item gep:rubber
+@out
+item gep:license_plate_holder_12x3
+
+# fcl:bpt @ gep.recipes.car_parts
+@in
+item iron_ingot
+@out
+item gep:license_plate_12x3_generic
