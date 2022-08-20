@@ -1,0 +1,15 @@
+{
+    "RegistryName": "gep:rolling_mill_belt",
+    "Addon": "fvtm:gep",
+    "Name": "Rolling Mill Belt",
+    "Model": "null",
+    "BlockType": "MULTIBLOCK_4ROT",
+    "Material": "IRON",
+    "MapColor": "CLAY",
+    "Invisible": true,
+    "MultiSubBlock": true,
+    "HideItem": true,
+    "AABBs":{
+    	"normal": [ 0.0, 0.0, 0.0, 1.0, 0.625, 1.0 ]
+    }
+}
