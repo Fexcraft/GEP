@@ -4,8 +4,8 @@
 	"Model": "gep:models/block/rolling_mill.fmf",
     "ModelData":{
 		"ItemScale": 0.125,
-		"Transform":[
-			"rotate -90 0 1 0"
+		"Transforms":[
+			"rotate 0 1 0 90"
 		]
 	},
 	"Name": "Rolling Mill",
