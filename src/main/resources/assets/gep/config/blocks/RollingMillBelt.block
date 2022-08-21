@@ -7,7 +7,6 @@
     "Material": "IRON",
     "MapColor": "CLAY",
     "Invisible": true,
-    "MultiSubBlock": true,
     "HideItem": true,
     "AABBs":{
     	"normal": [ 0.0, 0.0, 0.0, 1.0, 0.625, 1.0 ]
