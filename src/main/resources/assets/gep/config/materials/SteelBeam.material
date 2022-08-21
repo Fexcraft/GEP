@@ -1,0 +1,6 @@
+{
+    "RegistryName": "gep:steel_beam",
+    "Addon": "fvtm:gep",
+    "Name": "Steel Beam",
+    "OreDictionary": "beamSteel"
+}

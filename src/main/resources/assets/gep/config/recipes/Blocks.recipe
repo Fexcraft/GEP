@@ -30,3 +30,14 @@ item log*2
 item diamond*2
 @out
 item gep:crusher
+
+# fcl:bpt @ gep.recipes.machines
+@in
+item iron_block*6
+item furnace*3
+item gep:steel_ingot*24
+item redstone*8
+item glowstone*4
+item diamond*1
+@out
+item gep:rolling_mill

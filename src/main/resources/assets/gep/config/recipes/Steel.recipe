@@ -1,14 +1,14 @@
 // steel recipes
 
 // Steel Ingot
-# gep:smeltery @ steel_0
+# gep:smeltery @ steel_x4
 @in input
 oredict ingotIron*4
 item coal
 @out output
 item gep:steel_ingot*4
 
-# gep:smeltery @ steel_1
+# gep:smeltery @ steel_x8
 @in input
 oredict ingotIron*8
 item coal*2
@@ -18,24 +18,65 @@ item gep:steel_ingot*8
 // Steel Plates
 # gep:rolling_mill @ steel_plate_x1
 @in
-item gep:steel_ingot
+oredict ingotSteel
 @out
 item gep:steel_plate
 
 # gep:rolling_mill @ steel_plate_x2
 @in
-item gep:steel_ingot*2
+oredict ingotSteel*2
 @out
 item gep:steel_plate*2
 
 # gep:rolling_mill @ steel_plate_x4
 @in
-item gep:steel_ingot*4
+oredict ingotSteel*4
 @out
 item gep:steel_plate*4
 
 # gep:rolling_mill @ steel_plate_x8
 @in
-item gep:steel_ingot*8
+oredict ingotSteel*8
 @out
 item gep:steel_plate*8
+
+// Steel Bars
+# gep:rolling_mill @ steel_bar_x2
+@in
+oredict ingotSteel
+@out
+item gep:steel_bar*2
+
+# gep:rolling_mill @ steel_bar_x4
+@in
+oredict ingotSteel*2
+@out
+item gep:steel_bar*4
+
+# gep:rolling_mill @ steel_bar_x8
+@in
+oredict ingotSteel*4
+@out
+item gep:steel_bar*8
+
+//Steel Beams
+# gep:smeltery @ steel_beam_x1
+@in input
+oredict ingotSteel*4
+item coal
+@out output
+item gep:steel_beam
+
+# gep:smeltery @ steel_beam_x2
+@in input
+oredict ingotSteel*8
+item coal
+@out output
+item gep:steel_beam*2
+
+# gep:smeltery @ steel_beam_x4
+@in input
+oredict ingotSteel*16
+item coal
+@out output
+item gep:steel_beam*4

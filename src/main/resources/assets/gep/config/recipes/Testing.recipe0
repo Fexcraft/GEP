@@ -5,7 +5,6 @@
 item slime_ball
 @out output
 item gep:glue
-consume heat 5
 time 100
 
 # itemgroup @ test_planks

@@ -1,0 +1,6 @@
+{
+    "RegistryName": "gep:steel_bar",
+    "Addon": "fvtm:gep",
+    "Name": "Steel Bar",
+    "OreDictionary": "barSteel"
+}
