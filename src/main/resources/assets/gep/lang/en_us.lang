@@ -41,7 +41,7 @@ item.gep:cap.name=GEP Cap
 # Blocks
 tile.gep:pizza_oven.name=FRSM Pizza Oven
 tile.gep:pizza_oven2.name=FRSM Pizza Oven
-tile.gep:mailbox5.name=Mailbox (5)
+tile.gep:mailbox5.name=Mailbox
 tile.gep:smeltery.name=Smeltery
 tile.gep:smeltery_body.name=Smeltery (Body)
 tile.gep:smeltery_tank.name=Smeltery (Tank)
@@ -52,6 +52,9 @@ tile.gep:signal_30_low.name=Signal 30 (Ground)
 tile.gep:switch_simple_fork2.name=Switch (Fork 2/Y)
 tile.gep:switch_simple_fork3.name=Switch (Fork 3)
 tile.gep:switch_simple_double.name=Switch (Double/X)
+tile.gep:rolling_mill.name=Rolling Mill
+tile.gep:rolling_mill_body.name=Rolling Mill (Body)
+tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
 
 # Recipe Groups (FCL)
 gep.recipes.machines=GEP Machines/Blocks
