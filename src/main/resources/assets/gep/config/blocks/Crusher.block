@@ -10,7 +10,7 @@
 		],
 		"ItemScale": 0.125
 	},
-	"Name": "3³ Rock Crusher",
+	"Name": "3ï¿½ Rock Crusher",
     "Description": "&7The former &2HCP &cCrusher",
 	"Texture": "gep:textures/blocks/crusher.png",
     "BlockType": "MULTIBLOCK_4ROT",
@@ -21,27 +21,28 @@
     		"output": "item-16",
     		"input": "item-12"
     	},
-		"Blocks":[
-			[ "gep:crusher_body",  1, 0, -1 ],
-			[ "gep:crusher_body",  0, 0, -1 ],
-			[ "gep:crusher_body", -1, 0, -1 ],
-			[ "gep:crusher_body",  1, 0,  0 ],
-			[ "gep:crusher",       0, 0,  0 ],
-			[ "gep:crusher_body", -1, 0,  0 ],
-			[ "gep:crusher_body",  1, 0,  1 ],
-			[ "gep:crusher_body",  0, 0,  1 ],
-			[ "gep:crusher_body", -1, 0,  1 ],
-			[ "gep:crusher_body",  0, 1,  0 ],
-			[ "gep:crusher_body",  1, 2, -1 ],
-			[ "gep:crusher_body",  0, 2, -1 ],
-			[ "gep:crusher_body", -1, 2, -1 ],
-			[ "gep:crusher_body",  1, 2,  0 ],
-			[ "gep:crusher_body",  0, 2,  0 ],
-			[ "gep:crusher_body", -1, 2,  0 ],
-			[ "gep:crusher_body",  1, 2,  1 ],
-			[ "gep:crusher_body",  0, 2,  1 ],
-			[ "gep:crusher_body", -1, 2,  1 ]
+    	"Pattern":[
+			[
+				"###",
+				"#X#",
+				"###"
+			],
+			[
+				"   ",
+				" # ",
+				"   "
+			],
+			[
+				"###",
+				"###",
+				"###"
+			]
 		],
+		"Core": [ 1, 0, 1 ],
+		"Blocks":{
+			"X": "gep:crusher",
+			"#": "gep:crusher_body"
+		},
     	"Triggers":[
     		{
     			"block": [ -1, 0, -1 ],
