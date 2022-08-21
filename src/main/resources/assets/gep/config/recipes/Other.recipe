@@ -22,14 +22,44 @@ item gep:license_plate_12x3_generic
 
 #fcl:bpt @ gep.recipes.misc
 @in
-oredict ingotSteel
+item gep:steel_plate
 item gep:rubber
 @out
 item gep:diesel_canister
 
 #fcl:bpt @ gep.recipes.misc
 @in
-oredict ingotSteel
+item gep:steel_plate
 item gep:rubber
 @out
 item gep:petrol_canister
+
+# fcl:bpt @ gep.recipes.misc
+@in
+item potato*2
+item glass_bottle
+item paper
+@out
+item gep:glue
+
+# fcl:bpt @ gep.recipes.misc
+@in
+item glass_bottle*4
+item log 3
+item dye*2 3
+item paper
+@out
+item gep:cola*4
+
+# fcl:bpt @ gep.recipes.car_parts
+@in
+item gep:steel_plate*2
+@out
+item gep:fuel_tank
+
+# fcl:bpt @ gep.recipes.car_parts
+@in
+item iron_ingot
+item gep:rubber
+@out
+item gep:key*4
