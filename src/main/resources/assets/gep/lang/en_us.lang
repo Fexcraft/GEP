@@ -57,6 +57,9 @@ tile.gep:switch_simple_double.name=Switch (Double/X)
 tile.gep:rolling_mill.name=Rolling Mill
 tile.gep:rolling_mill_body.name=Rolling Mill (Body)
 tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
+tile.gep:oil_pump.name=Oil Pump
+tile.gep:oil_pump_body.name=Oil Pump (Body)
+tile.gep:oil_pump_tank.name=Oil Pump (Tank)
 
 # Recipe Groups (FCL)
 gep.recipes.machines=GEP Machines/Blocks

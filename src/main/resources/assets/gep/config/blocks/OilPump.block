@@ -1,0 +1,82 @@
+{
+	"RegistryName": "gep:oil_pump",
+	"Addon": "fvtm:gep",
+	"Model": "gep:models/block/oilpump.fmf",
+    "ModelData":{
+		"ItemScale": 0.125,
+		"Transforms":[
+			"rotate 0 1 0 90"
+		]
+	},
+	"Name": "Oil Pump",
+    "Description": [
+		"&7Universal Oil Pump."
+	],
+	"Texture": "gep:textures/blocks/oilpump.png",
+    "BlockType": "MULTIBLOCK_4ROT",
+    "Material": "IRON",
+    "MapColor": "CLAY",
+    "MultiBlock":{
+    	"Inventories":{
+    		"input": "item-56",
+    		"tank": "fluid-32000"
+    	},
+    	"Pattern":[
+			[
+				"AXA",
+				"AXA",
+				"   ",
+				" # ",
+				"   ",
+				"   ",
+				" X "
+			],
+			[
+				"AXX",
+				"AXX",
+				"   ",
+				" X "
+			],
+			[
+				"",
+				"",
+				"",
+				" X"
+			],
+			[
+				"",
+				"",
+				"",
+				" X"
+			],
+			[
+				"",
+				"",
+				"",
+				" X"
+			]
+		],
+		"Core": [ 4, 0 , 1],
+		"Blocks":{
+			"X": "gep:oil_pump_body",
+			"#": "gep:oil_pump",
+			"A": "gep:oil_pump_tank"
+		},
+    	"Triggers":[
+			
+		],
+    	"Access":[
+			
+		],
+		"Script": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockScript.class",
+		"ScriptData":{
+			"auto_recipe_chooser": false,
+			"instant": false,
+			"cooldown": 20,
+			"process_speed": 1,
+			"cooldown_speed": 1,
+			"process_time": 600
+		},
+		"Tickable": true
+    }
+}

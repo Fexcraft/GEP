@@ -1,0 +1,11 @@
+{
+    "RegistryName": "gep:oil_pump_body",
+    "Addon": "fvtm:gep",
+    "Name": "Oil Pump Body",
+    "Model": "null",
+    "BlockType": "MULTIBLOCK_4ROT",
+    "Material": "IRON",
+    "MapColor": "CLAY",
+    "Invisible": true,
+    "HideItem": true
+}
