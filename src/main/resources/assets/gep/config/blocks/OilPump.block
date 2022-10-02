@@ -19,7 +19,7 @@
     "MultiBlock":{
     	"Inventories":{
     		"input": "item-56",
-    		"tank": "fluid-32000"
+    		"tank": "fluid-128000"
     	},
     	"Pattern":[
 			[
@@ -56,27 +56,21 @@
 				" X"
 			]
 		],
-		"Core": [ 4, 0 , 1],
+		"Core": [ 3, 0 , 1],
 		"Blocks":{
 			"X": "gep:oil_pump_body",
 			"#": "gep:oil_pump",
 			"A": "gep:oil_pump_tank"
 		},
     	"Triggers":[
-			
+			[ 1, 0, 3, "script", "open_gui" ],
+			[ 1, 1, 3, "script", "open_gui"]
 		],
     	"Access":[
-			
+			[ 1, 0, 3, "tank"]
 		],
-		"Script": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockScript.class",
-		"ScriptData":{
-			"auto_recipe_chooser": false,
-			"instant": false,
-			"cooldown": 20,
-			"process_speed": 1,
-			"cooldown_speed": 1,
-			"process_time": 600
-		},
+		"Script": "gep:scripts/oilpump.script",
+		"ScriptRoot": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockFS.class",
 		"Tickable": true
     }
 }
