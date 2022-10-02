@@ -1,0 +1,18 @@
+int storage = 0
+bln instant = false
+
+act init(obj context)
+	context.register(storage)
+	context.addGuiElement("progressbar", "Stored Crude Oil:", "storage", 128000, "#628c6d")
+;;
+
+act ready(obj context)
+	return true
+;;
+
+act running(obj context)
+	storage += 1000
+	if(storage > 128000)
+		storage = 0
+	;;
+;;
