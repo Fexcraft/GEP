@@ -1,5 +1,6 @@
 int storage = 0
 bln instant = false
+int process_time = 100
 
 act init(obj context)
 	context.register(storage)
@@ -11,8 +12,5 @@ act ready(obj context)
 ;;
 
 act running(obj context)
-	storage += 1000
-	if(storage > 128000)
-		storage = 0
-	;;
+	//
 ;;
