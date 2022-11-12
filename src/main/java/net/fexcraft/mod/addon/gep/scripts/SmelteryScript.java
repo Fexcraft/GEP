@@ -49,7 +49,7 @@ public class SmelteryScript extends DefaultCraftBlockScript {
 	
 	@Override
 	public boolean ready(MultiblockTickableTE tile){
-		lava = tile.getMultiBlockData().getFluidTank("tank").getFluidAmount();
+		lava = tile.getMultiBlockData().getInventory("tank").getTank().getFluidAmount();
 		return heat > 1500;
 	}
 	
@@ -64,11 +64,11 @@ public class SmelteryScript extends DefaultCraftBlockScript {
 		int lavat = (int)(heatby * lavacon);
 		if(lavat < 1) lavat = 1;
 		if(lava < lavat){
-			tile.getMultiBlockData().getFluidTank("tank").drain(lava, true);
+			tile.getMultiBlockData().getInventory("tank").getTank().drain(lava, true);
 			heat += heatby > 2 ? heatby / 2 : 1;
 			return;
 		}
-		tile.getMultiBlockData().getFluidTank("tank").drain(lavat, true);
+		tile.getMultiBlockData().getInventory("tank").getTank().drain(lavat, true);
 		heat += heatby;
 	}
 	
