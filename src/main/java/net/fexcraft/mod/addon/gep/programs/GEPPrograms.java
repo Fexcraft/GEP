@@ -53,7 +53,7 @@ public class GEPPrograms {
 				if(data.tile == null || data.cache == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getInventory("output") != null){
-					List<ItemStack> stacks = multidata.getInventory("output");
+					List<ItemStack> stacks = multidata.getInventory("output").getStacks();
 					fullstate = 0;
 					for(int i = 0; i < 16; i++){
 						if(!stacks.get(i).isEmpty()) fullstate++;
