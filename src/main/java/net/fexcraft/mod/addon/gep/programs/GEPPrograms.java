@@ -1,7 +1,5 @@
 package net.fexcraft.mod.addon.gep.programs;
 
-import java.util.List;
-
 import org.lwjgl.opengl.GL11;
 
 import net.fexcraft.lib.common.Static;
@@ -9,9 +7,9 @@ import net.fexcraft.mod.addon.gep.scripts.SmelteryScript;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
 import net.fexcraft.mod.fvtm.data.block.CraftBlockScript;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
+import net.fexcraft.mod.fvtm.data.inv.InvHandlerItem.StackEntry;
 import net.fexcraft.mod.fvtm.data.root.Model.ModelRenderData;
 import net.fexcraft.mod.fvtm.model.ModelGroup;
-import net.minecraft.item.ItemStack;
 
 public class GEPPrograms {
 
@@ -53,10 +51,9 @@ public class GEPPrograms {
 				if(data.tile == null || data.cache == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getInventory("output") != null){
-					List<ItemStack> stacks = multidata.getInventory("output").getStacks();
 					fullstate = 0;
-					for(int i = 0; i < 16; i++){
-						if(!stacks.get(i).isEmpty()) fullstate++;
+					for(StackEntry entry : multidata.getInventory("output").getStacks()){
+						fullstate += entry.stacksize();
 					}
 			    	GL11.glTranslatef(0, -Static.sixteenth * fullstate, 0);
 				}
