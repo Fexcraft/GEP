@@ -19,7 +19,8 @@
     	"Inventories":{
     		"input": "item-18",
     		"tank": "fluid-128000-lava",
-    		"output": "item-27"
+    		"output": "item-27",
+    		"heat": "variable-2000"
     	},
     	"Pattern":[
 			[
