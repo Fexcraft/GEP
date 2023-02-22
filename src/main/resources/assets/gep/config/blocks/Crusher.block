@@ -16,5 +16,6 @@
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
     "MapColor": "CLAY",
-	"Tickable": true
+	"Tickable": true,
+	"HideItem": true
 }
