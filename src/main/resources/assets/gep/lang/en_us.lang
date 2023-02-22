@@ -40,16 +40,14 @@ item.gep:license_plate_12x3_generic.name=12x3 License Plate
 item.gep:license_plate_holder_12x3.name=12x3 License Plate Holder
 item.gep:cap.name=GEP Cap
 
-# Blocks / Multiblocks
+# Blocks
 tile.gep:pizza_oven.name=FRSM Pizza Oven
 tile.gep:pizza_oven2.name=FRSM Pizza Oven
 tile.gep:mailbox5.name=Mailbox
-tile.gep:smeltery.name=Smeltery
 tile.gep:smeltery_core.name=Smeltery (Core)
 tile.gep:multi_sub.name=Generic Sub Block
 tile.gep:multi_sub_entity.name=Generic Sub Block (w/Entity)
-tile.gep:crusher.name=Crusher
-tile.gep:crusher_body.name=Crusher (Body)
+tile.gep:crusher_core.name=Crusher (Core)
 tile.gep:signal_30.name=Signal 30 (Pole)
 tile.gep:signal_30_low.name=Signal 30 (Ground)
 tile.gep:switch_simple_fork2.name=Switch (Fork 2/Y)
@@ -61,6 +59,10 @@ tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
 tile.gep:oil_pump.name=Oil Pump
 tile.gep:oil_pump_body.name=Oil Pump (Body)
 tile.gep:oil_pump_tank.name=Oil Pump (Tank)
+
+# Multiblocks
+item.gep:smeltery.name=Smeltery
+item.gep:crusher.name=Crusher
 
 # Recipe Groups (FCL)
 gep.recipes.machines=GEP Machines/Blocks
