@@ -1,0 +1,12 @@
+{
+    "RegistryName": "multi_sub_entity",
+    "Addon": "gep",
+    "Name": "Generic Sub Block (w/Entity)",
+    "Model": "null",
+    "BlockType": "MULTIBLOCK_4ROT",
+    "Material": "IRON",
+    "MapColor": "CLAY",
+    "MultiSubBlock": true,
+    "Invisible": true,
+    "HideItem": true
+}
