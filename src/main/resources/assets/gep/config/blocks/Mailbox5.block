@@ -2,9 +2,19 @@
     "RegistryName": "gep:mailbox5",
     "Addon": "fvtm:gep",
     "Name": "Mailbox 5",
-    "Description": "&7The never implemented &2Mailbox5 &7from &6States&7!",
     "Model": "null",
     "BlockType": "GENERIC_4ROT",
     "Material": "IRON",
-    "MapColor": "CLAY"
+    "MapColor": "CLAY",
+    "MultiSubBlock": true,
+    "Functions":[
+        {
+            "type": "fvtm:bool_value",
+            "key": "test"
+        },
+        {
+            "type": "fvtm:seat",
+            "pos": [ 0, 0.9, 0]
+        }
+    ]
 }
