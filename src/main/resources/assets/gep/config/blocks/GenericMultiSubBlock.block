@@ -1,7 +1,7 @@
 {
-    "RegistryName": "gep:smeltery_body",
-    "Addon": "fvtm:gep",
-    "Name": "Smeltery",
+    "RegistryName": "multi_sub",
+    "Addon": "gep",
+    "Name": "Generic Sub Block",
     "Model": "null",
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
