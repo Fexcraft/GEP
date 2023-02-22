@@ -1,6 +1,6 @@
 {
-	"RegistryName": "gep:crusher",
-	"Addon": "fvtm:gep",
+	"RegistryName": "crusher_core",
+	"Addon": "gep",
 	"Model": "gep:models/block/crusher.fmf",
     "ModelData":{
 		"Programs":[
@@ -16,88 +16,5 @@
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
     "MapColor": "CLAY",
-    "MultiBlock":{
-    	"Inventories":{
-    		"output": "item-16",
-    		"input": "item-12"
-    	},
-    	"Pattern":[
-			[
-				"###",
-				"#X#",
-				"###"
-			],
-			[
-				"   ",
-				" # ",
-				"   "
-			],
-			[
-				"###",
-				"###",
-				"###"
-			]
-		],
-		"Core": [ 1, 0, 1 ],
-		"Blocks":{
-			"X": "gep:crusher",
-			"#": "gep:crusher_body"
-		},
-    	"Triggers":[
-			[ 0, 0, 0, "inventory", "output"],
-			[ 1, 0, 0, "inventory", "output"],
-			[ 2, 0, 0, "inventory", "output"],
-			[ 0, 0, 1, "inventory", "output"],
-			[ 1, 0, 1, "inventory", "output"],
-			[ 2, 0, 1, "inventory", "output"],
-			[ 0, 0, 2, "inventory", "output"],
-			[ 1, 0, 2, "inventory", "output"],
-			[ 2, 0, 2, "inventory", "output"],
-			
-			
-			[ 1, 1, 1, "script", "open_gui"],
-			
-			
-			[ 0, 2, 0, "inventory", "input"],
-			[ 1, 2, 0, "inventory", "input"],
-			[ 2, 2, 0, "inventory", "input"],
-			[ 0, 2, 1, "inventory", "input"],
-			[ 1, 2, 1, "inventory", "input"],
-			[ 2, 2, 1, "inventory", "input"],
-			[ 0, 2, 2, "inventory", "input"],
-			[ 1, 2, 2, "inventory", "input"],
-			[ 2, 2, 2, "inventory", "input"]
-    	],
-    	"Access":[
-			[ 0, 0, 0, "output"],
-			[ 1, 0, 0, "output"],
-			[ 2, 0, 0, "output"],
-			[ 0, 0, 1, "output"],
-			[ 1, 0, 1, "output"],
-			[ 2, 0, 1, "output"],
-			[ 0, 0, 2, "output"],
-			[ 1, 0, 2, "output"],
-			[ 2, 0, 2, "output"],
-			
-			[ 0, 2, 0, "input"],
-			[ 1, 2, 0, "input"],
-			[ 2, 2, 0, "input"],
-			[ 0, 2, 1, "input"],
-			[ 1, 2, 1, "input"],
-			[ 2, 2, 1, "input"],
-			[ 0, 2, 2, "input"],
-			[ 1, 2, 2, "input"],
-			[ 2, 2, 2, "input"]
-    	],
-		"Script": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockScript.class",
-		"ScriptData":{
-			"auto_recipe_chooser": true,
-			"instant": false,
-			"cooldown": 80,
-			"process_speed": 1,
-			"cooldown_speed": 1,
-			"process_time": 80
-		},
-		"Tickable": true
-    }
+	"Tickable": true
 }
