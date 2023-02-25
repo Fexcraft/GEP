@@ -1,6 +1,6 @@
 {
-	"RegistryName": "gep:oil_pump",
-	"Addon": "fvtm:gep",
+	"RegistryName": "oil_pump_core",
+	"Addon": "gep",
 	"Model": "gep:models/block/oilpump.fmf",
     "ModelData":{
 		"ItemScale": 0.125,
@@ -16,67 +16,5 @@
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
     "MapColor": "CLAY",
-    "MultiBlock":{
-    	"Inventories":{
-    		"input": "item-56",
-    		"tank": "var-70000"
-    	},
-    	"Pattern":[
-			[
-				"AXA",
-				"AXA",
-				"   ",
-				" # ",
-				"   ",
-				"   ",
-				" X "
-			],
-			[
-				"AXX",
-				"AXX",
-				"   ",
-				" X "
-			],
-			[
-				"",
-				"",
-				"",
-				" X"
-			],
-			[
-				"",
-				"",
-				"",
-				" X"
-			],
-			[
-				"",
-				"",
-				"",
-				" X"
-			]
-		],
-		"Core": [ 3, 0 , 1],
-		"Blocks":{
-			"X": "gep:oil_pump_body",
-			"#": "gep:oil_pump",
-			"A": "gep:oil_pump_tank"
-		},
-    	"Triggers":[
-			[ 2, 1, 0, "inventory", "input" ],
-			[ 2, 1, 1, "script", "open_gui"]
-		],
-    	"Access":[
-			[ 1, 0, 3, "input"],
-			[ 0, 0, 0, "tank"],
-			[ 2, 0, 0, "tank"],
-			[ 0, 0, 1, "tank"],
-			[ 2, 0, 1, "tank"],
-			[ 0, 1, 0, "tank"],
-			[ 2, 1, 0, "tank"]
-		],
-		"Script": "gep:scripts/oilpump.script",
-		"ScriptRoot": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockFS.class",
-		"Tickable": true
-    }
+	"Tickable": true
 }
