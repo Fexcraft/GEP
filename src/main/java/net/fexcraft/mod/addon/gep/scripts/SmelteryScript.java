@@ -1,16 +1,15 @@
 package net.fexcraft.mod.addon.gep.scripts;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.JsonObject;
-
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
 import net.fexcraft.mod.fvtm.data.block.MB_Trigger;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
 import net.fexcraft.mod.fvtm.data.inv.InvHandlerFluid;
 import net.fexcraft.mod.fvtm.data.inv.InvHandlerVar;
+import net.fexcraft.mod.fvtm.gui.block.GBCElm;
 import net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockScript;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -28,6 +27,7 @@ public class SmelteryScript extends DefaultCraftBlockScript {
 
 	public SmelteryScript(JsonObject obj){
 		super(obj);
+		this.add_def_choose = false;
 		heatincr = obj.has("heat_per_tick") ? obj.get("heat_per_tick").getAsInt() : 10;
 		lavacon = obj.has("lava_per_heat") ? obj.get("lava_per_heat").getAsFloat() : 1f;
 	}
@@ -126,10 +126,14 @@ public class SmelteryScript extends DefaultCraftBlockScript {
 	}
 
 	@Override
-	public List<Object[]> getGuiElements(){
-		ArrayList<Object[]> list = new ArrayList<>();
-		list.add(new Object[]{ GuiElement.PROGRESS_BAR, "Heat/Temp", "heat", 2000, RGB.RED });
-		list.add(new Object[]{ GuiElement.TEXT_VALUE, "Lava Tank: %smB", "tank" });
+	public List<Object[]> getUIElements(){
+		List list = super.getUIElements();
+		list.add(new Object[]{ GBCElm.SPACER});
+		list.add(new Object[]{ GBCElm.ELM_LEFT_TEXT, "Heat/Temp: " });
+		list.add(new Object[]{ GBCElm.ELM_RIGHT_PROGRESS, "heat", 2000, RGB.RED });
+		list.add(new Object[]{ GBCElm.ELM_LEFT_TEXT, "Lava Tank: " });
+		list.add(new Object[]{ GBCElm.ELM_RIGHT_PROGRESS, "tank", 2000, "#ffb700" });
+		addChooseElements(list);
 		return list;
 	}
 
