@@ -3,22 +3,22 @@
 # gep:oil_pump @ coal
 @in
 item coal
-consume storage -1000
+consume tank -1000
 
 # gep:oil_pump @ coalx4
 @in
 item coal*4
-consume storage -4000
+consume tank -4000
 time 400
 
 # gep:oil_pump @ coalx8
 @in
 item coal*8
-consume storage -8000
+consume tank -8000
 time 800
 
 # gep:oil_pump @ coalx16
 @in
 item coal*16
-consume storage -16000
+consume tank -16000
 time 1600
