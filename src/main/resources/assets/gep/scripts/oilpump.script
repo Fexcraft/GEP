@@ -1,16 +1,11 @@
-int storage = 0
 bln instant = false
 int process_time = 100
+bln def_ui_elements = true
+bln def_ui_itemview = false
+bln def_ui_choose = false
 
 act init(obj context)
-	context.register(storage)
-	context.addGuiElement("progressbar", "Stored Crude Oil:", "storage", 128000, "#628c6d")
-;;
-
-act ready(obj context)
-	return true
-;;
-
-act running(obj context)
-	//
+	context.addUIElement("ELM_LEFT_TEXT", "Stored Crude Oil:")
+	context.addUIElement("ELM_RIGHT_PROGRESS", "tank", "auto", "#628c6d")
+	context.addChooseElements()
 ;;
