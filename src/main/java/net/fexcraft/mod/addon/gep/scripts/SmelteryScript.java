@@ -5,6 +5,7 @@ import java.util.List;
 import com.google.gson.JsonObject;
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
+import net.fexcraft.mod.fvtm.data.block.BlockData;
 import net.fexcraft.mod.fvtm.data.block.MB_Trigger;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
 import net.fexcraft.mod.fvtm.data.inv.InvHandlerFluid;
@@ -126,13 +127,13 @@ public class SmelteryScript extends DefaultCraftBlockScript {
 	}
 
 	@Override
-	public List<Object[]> getUIElements(){
-		List list = super.getUIElements();
+	public List<Object[]> getUIElements(BlockData bdata, MultiBlockData mdata){
+		List list = super.getUIElements(bdata, mdata);
 		list.add(new Object[]{ GBCElm.SPACER});
 		list.add(new Object[]{ GBCElm.ELM_LEFT_TEXT, "Heat/Temp: " });
 		list.add(new Object[]{ GBCElm.ELM_RIGHT_PROGRESS, "heat", 2000, RGB.RED });
 		list.add(new Object[]{ GBCElm.ELM_LEFT_TEXT, "Lava Tank: " });
-		list.add(new Object[]{ GBCElm.ELM_RIGHT_PROGRESS, "tank", 2000, "#ffb700" });
+		list.add(new Object[]{ GBCElm.ELM_RIGHT_PROGRESS, "tank", "auto", "#ffb700" });
 		addChooseElements(list);
 		return list;
 	}
