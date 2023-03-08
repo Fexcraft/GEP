@@ -1,11 +1,41 @@
+// overriding/filling-in the default root craft script values
 bln instant = false
 int process_time = 100
+int cooldown_speed = 10
 bln def_ui_elements = true
 bln def_ui_itemview = false
 bln def_ui_choose = false
 
+// custom script values
+bln working = false
+int fill = 0
+int cap = 0
+
+// this one is usually called when the script first loads
 act init(obj context)
 	context.addUIElement("ELM_LEFT_TEXT", "Stored Crude Oil:")
 	context.addUIElement("ELM_RIGHT_PROGRESS", "tank", "auto", "#628c6d")
 	context.addChooseElements()
+    cap = context.varCapacity("tank")
+;;
+
+// called every tick before cooldown or crafting is checked
+act ready(obj context)
+    fill = context.varValue("tank")
+    if(fill > cap)
+        context.resetRecipe()
+        working = false
+    ;;
+    else
+        working = true
+    ;;
+    return working
+;;
+
+// this one is called ever tick when "ready" returns false
+// slowly decreasing fill state if it's over capacity
+act prepare(obj context)
+    if(fill <= cap) return
+    fill = fill - 1
+    context.varValue("tank", fill)
 ;;
