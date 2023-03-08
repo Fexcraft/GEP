@@ -4,7 +4,7 @@
 	"Name": "Smeltery",
 	"Inventories": {
 		"input": "item-18",
-		"tank": "fluid-128000-lava",
+		"tank": "fluid-8000-lava",
 		"output": "item-27",
 		"heat": "variable-2000"
 	},
