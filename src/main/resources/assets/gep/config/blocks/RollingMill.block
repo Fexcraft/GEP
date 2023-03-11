@@ -1,5 +1,5 @@
 {
-	"RegistryName": "gep:rolling_mill",
+	"RegistryName": "gep:rolling_mill_core",
 	"Addon": "fvtm:gep",
 	"Model": "gep:models/block/rolling_mill.fmf",
     "ModelData":{
@@ -18,84 +18,6 @@
     "BlockType": "MULTIBLOCK_4ROT",
     "Material": "IRON",
     "MapColor": "CLAY",
-    "MultiBlock":{
-    	"Inventories":{
-    		"output": "item-56",
-    		"input": "item-56"
-    	},
-    	"Pattern":[
-			[
-				"XXX",
-				" B ",
-				" B ",
-				" B ",
-				"XOX",
-				" B ",
-				" B ",
-				" B ",
-				"XXX"
-			],
-			[
-				"XXX",
-				"   ",
-				"   ",
-				"   ",
-				"XXX",
-				"   ",
-				"   ",
-				"   ",
-				"   "
-			]
-		],
-		"Core": [ 4, 0 , 1],
-		"Blocks":{
-			"X": "gep:rolling_mill_body",
-			"O": "gep:rolling_mill",
-			"B": "gep:rolling_mill_belt"
-		},
-    	"Triggers":[
-			[ 0, 0, 0, "script", "open_gui", "south"],
-			[ 1, 0, 0, "script", "open_gui", "south"],
-			[ 2, 0, 0, "script", "open_gui", "south"],
-			[ 0, 1, 0, "script", "open_gui", "south"],
-			[ 1, 1, 0, "script", "open_gui", "south"],
-			[ 2, 1, 0, "script", "open_gui", "south"],
-			[ 0, 0, 0, "inventory", "input", "north"],
-			[ 1, 0, 0, "inventory", "input", "north"],
-			[ 2, 0, 0, "inventory", "input", "north"],
-			[ 0, 1, 0, "inventory", "input", "north"],
-			[ 1, 1, 0, "inventory", "input", "north"],
-			[ 2, 1, 0, "inventory", "input", "north"],
-			[ 0, 0, 4, "inventory", "input"],
-			[ 1, 0, 4, "inventory", "input"],
-			[ 2, 0, 4, "inventory", "input"],
-			[ 0, 1, 4, "inventory", "input"],
-			[ 1, 1, 4, "inventory", "input"],
-			[ 2, 1, 4, "inventory", "input"],
-			[ 0, 0, 8, "inventory", "output"],
-			[ 1, 0, 8, "inventory", "output"],
-			[ 2, 0, 8, "inventory", "output"]
-		],
-    	"Access":[
-			[ 0, 0, 0, "input" ],
-			[ 1, 0, 0, "input" ],
-			[ 2, 0, 0, "input" ],
-			[ 0, 1, 0, "input" ],
-			[ 1, 1, 0, "input" ],
-			[ 2, 1, 0, "input" ],
-			[ 0, 0, 8, "output" ],
-			[ 1, 0, 8, "output" ],
-			[ 2, 0, 8, "output" ]
-		],
-		"Script": "net.fexcraft.mod.fvtm.util.script.DefaultCraftBlockScript.class",
-		"ScriptData":{
-			"auto_recipe_chooser": false,
-			"instant": false,
-			"cooldown": 80,
-			"process_speed": 1,
-			"cooldown_speed": 1,
-			"process_time": 200
-		},
-		"Tickable": true
-    }
+	"Tickable": true,
+	"HideItem": true
 }
