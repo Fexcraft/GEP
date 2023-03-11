@@ -34,8 +34,8 @@ act ready(obj context)
 
 // this one is called ever tick when "ready" returns false
 // slowly decreasing fill state if it's over capacity
-act prepare(obj context)
-    if(fill <= cap) return
-    fill = fill - 1
-    context.varValue("tank", fill)
-;;
+//act prepare(obj context)
+//    if(fill <= cap) return
+//    fill = fill - 1
+//    context.varValue("tank", fill)
+//;;
