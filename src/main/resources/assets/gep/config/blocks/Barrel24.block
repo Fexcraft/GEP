@@ -1,0 +1,29 @@
+{
+	"RegistryName": "barrel_24",
+	"Addon": "gep",
+	"Model": "gep:models/block/barrel24.fmf",
+    "ModelData":{
+		"ItemScale": 0.625,
+		"Programs": [
+			"barrel fvtm:rgb_primary"
+		]
+	},
+	"Name": "Barrel (T24)",
+    "Description": [
+		"&7Universal Barrel 24mb"
+	],
+	"Texture": "gep:textures/blocks/barrel24.png",
+    "BlockType": "GENERIC_16ROT",
+    "Material": "IRON",
+    "MapColor": "CLAY",
+	"Functions": [
+		{
+			"type": "fvtm:barrel",
+			"capacity": "2000",
+			"category": "barrel_24",
+			"compatible": [
+				"barrel_32"
+			]
+		}
+	]
+}
