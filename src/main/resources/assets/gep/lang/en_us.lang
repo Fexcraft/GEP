@@ -53,20 +53,21 @@ tile.gep:signal_30_low.name=Signal 30 (Ground)
 tile.gep:switch_simple_fork2.name=Switch (Fork 2/Y)
 tile.gep:switch_simple_fork3.name=Switch (Fork 3)
 tile.gep:switch_simple_double.name=Switch (Double/X)
-tile.gep:rolling_mill.name=Rolling Mill
-tile.gep:rolling_mill_body.name=Rolling Mill (Body)
+tile.gep:rolling_mill_core.name=Rolling Mill (Core)
 tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
-tile.gep:oil_pump.name=Oil Pump
-tile.gep:oil_pump_body.name=Oil Pump (Body)
-tile.gep:oil_pump_tank.name=Oil Pump (Tank)
+tile.gep:oil_pump_core.name=Oil Pump (Core)
+tile.gep:barrel_24.name=Barrel (T24)
 
 # Multiblocks
 item.gep:smeltery.name=Smeltery
 item.gep:crusher.name=Crusher
+item.gep:rolling_mill.name=Rolling Mill
+item.gep:oilpump.name=Oil Pump
 
 # Recipe Groups (FCL)
 gep.recipes.machines=GEP Machines/Blocks
 gep.recipes.materials=GEP Materials
+gep.recipes.containers=GEP Containers/Barrels
 gep.recipes.rails=30px Rails
 gep.recipes.clothes=GEP Clothes
 gep.recipes.car_parts=GEP Car Parts
