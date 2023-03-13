@@ -3,7 +3,7 @@
 	"Addon": "gep",
 	"Inventories":{
 		"input": "item-56",
-		"tank": "var-70000"
+		"tank": "var-70000-crude_oil:barrel_24:2:out"
 	},
 	"Pattern":[
 		[
