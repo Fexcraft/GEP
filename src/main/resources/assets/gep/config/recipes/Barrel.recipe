@@ -1,0 +1,10 @@
+// barrel recipes
+
+// Type 24 Barrel
+# fcl:bpt @ gep.recipes.containers
+@in
+item gep:steel_plate*4
+item gep:rubber
+@out
+item gep:barrel_24
+
