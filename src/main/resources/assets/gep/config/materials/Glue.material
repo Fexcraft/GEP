@@ -2,7 +2,11 @@
     "RegistryName": "gep:glue",
     "Addon": "fvtm:gep",
     "Name": "Generic Testing Glue",
-    "Description": "Holds Ages!\n\n&oThrows no Exceptions!",
+    "Description": [
+		"Holds Ages!",
+		"",
+		"&oThrows no Exceptions!"
+	],
     "MaxItemStackSize": 1,
     "MaxItemDamage": 256,
     "OreDictionary": "dyeWhite",
