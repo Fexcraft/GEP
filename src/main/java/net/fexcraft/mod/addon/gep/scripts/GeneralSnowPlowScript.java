@@ -1,12 +1,14 @@
 package net.fexcraft.mod.addon.gep.scripts;
 
+import static net.fexcraft.mod.fvtm.util.AnotherUtil.toV3;
+
 import java.util.ArrayList;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import net.fexcraft.lib.common.json.JsonUtil;
-import net.fexcraft.lib.mc.utils.Pos;
+import net.fexcraft.mod.uni.Pos;
 import net.fexcraft.mod.fvtm.data.Seat;
 import net.fexcraft.mod.fvtm.data.vehicle.VehicleData;
 import net.fexcraft.mod.fvtm.data.vehicle.VehicleEntity;
@@ -53,9 +55,9 @@ public class GeneralSnowPlowScript extends VehicleScript {
 		attribute = obj.get("attribute").getAsString();
 		accuracy = JsonUtil.getIfExists(obj, "accuracy", 1f).floatValue();
 		for(float f = -(width / 2f) + accuracy / 2; f < width / 2; f += accuracy){
-			plow.add(pos.to16Double().add(0, 0, f));
-			plow.add(pos.to16Double().add(0, .5, f));
-			plow.add(pos.to16Double().add(0, 1, f));
+			plow.add(toV3(pos).add(0, 0, f));
+			plow.add(toV3(pos).add(0, .5, f));
+			plow.add(toV3(pos).add(0, 1, f));
 		}
 		if(obj.has("out")){
 			out = Pos.fromJson(obj.get("out"), true);
@@ -96,7 +98,7 @@ public class GeneralSnowPlowScript extends VehicleScript {
         }
         if(!accumulate || accumulated < 0) return;
         for(int i = -1; i < width && accumulated > 0; i++){
-        	bpos = new BlockPos(calculate(vehicle.getRotPoint().getAxes(), entity, out.to16Double().add(0, i, 0)));
+        	bpos = new BlockPos(calculate(vehicle.getRotPoint().getAxes(), entity, toV3(out).add(0, i, 0)));
         	state = entity.world.getBlockState(bpos);
         	boolean snow = state.getBlock() instanceof BlockSnow;
         	if(snow) accumulated += state.getBlock().getMetaFromState(state);
