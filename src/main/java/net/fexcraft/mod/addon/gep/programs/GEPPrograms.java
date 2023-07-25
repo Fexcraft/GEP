@@ -8,7 +8,7 @@ import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
 import net.fexcraft.mod.fvtm.data.block.CraftBlockScript;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
 import net.fexcraft.mod.fvtm.data.inv.InvHandlerItem.StackEntry;
-import net.fexcraft.mod.fvtm.data.root.Model.ModelRenderData;
+import net.fexcraft.mod.fvtm.model.ModelRenderData;
 import net.fexcraft.mod.fvtm.model.ModelGroup;
 
 public class GEPPrograms {
