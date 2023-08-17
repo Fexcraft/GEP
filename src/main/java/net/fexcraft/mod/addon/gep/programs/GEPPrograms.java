@@ -1,53 +1,53 @@
 package net.fexcraft.mod.addon.gep.programs;
 
-import org.lwjgl.opengl.GL11;
-
 import net.fexcraft.lib.common.Static;
 import net.fexcraft.mod.addon.gep.scripts.SmelteryScript;
 import net.fexcraft.mod.fvtm.block.generated.MultiblockTickableTE;
 import net.fexcraft.mod.fvtm.data.block.CraftBlockScript;
 import net.fexcraft.mod.fvtm.data.block.MultiBlockData;
 import net.fexcraft.mod.fvtm.data.inv.InvHandlerItem.StackEntry;
-import net.fexcraft.mod.fvtm.model.ModelRenderData;
 import net.fexcraft.mod.fvtm.model.ModelGroup;
+import net.fexcraft.mod.fvtm.model.ModelRenderData;
+import net.fexcraft.mod.fvtm.model.Program;
+import org.lwjgl.opengl.GL11;
 
 public class GEPPrograms {
 
 	public static void register(){
-		ModelGroup.PROGRAMS.add(new ModelGroup.Program(){
+		ModelGroup.PROGRAMS.add(new Program(){
 			
 			private float rotation;
 			
 			@Override
-			public String getId(){ return "gep:crusher_gears"; }
+			public String id(){ return "gep:crusher_gears"; }
 			
 			@Override
-			public void preRender(ModelGroup list, ModelRenderData data){
+			public void pre(ModelGroup list, ModelRenderData data){
 				if(data.tile == null || data.cache == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getScript() != null && ((CraftBlockScript)multidata.getScript()).getProcessed() > 0){
 			    	rotation = data.cache.getValue("rot_state", 0f) + 0.1f;
 			    	data.cache.setValue("rot_state", rotation > 360 ? rotation -= 360 : rotation);
-			    	list.rotateAxis(rotation, 2, false);
+			    	list.rotate(rotation, 2, false);
 				}
 				else rotation = 0;
 			}
 			
 			@Override
-			public void postRender(ModelGroup list, ModelRenderData data){
-				if(rotation != 0) list.rotateAxis(-rotation, 2, false);
+			public void post(ModelGroup list, ModelRenderData data){
+				if(rotation != 0) list.rotate(-rotation, 2, false);
 			}
 			
 		});
-		ModelGroup.PROGRAMS.add(new ModelGroup.Program(){
+		ModelGroup.PROGRAMS.add(new Program(){
 			
 			private int fullstate;
 			
 			@Override
-			public String getId(){ return "gep:crusher_fillstate"; }
+			public String id(){ return "gep:crusher_fillstate"; }
 			
 			@Override
-			public void preRender(ModelGroup list, ModelRenderData data){
+			public void pre(ModelGroup list, ModelRenderData data){
 				if(data.tile == null || data.cache == null) return;
 				MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 				if(multidata != null && multidata.getInventory("output") != null){
@@ -60,7 +60,7 @@ public class GEPPrograms {
 			}
 			
 			@Override
-			public void postRender(ModelGroup list, ModelRenderData data){
+			public void post(ModelGroup list, ModelRenderData data){
 		    	GL11.glTranslatef(0, Static.sixteenth * fullstate, 0);
 			}
 			
@@ -68,7 +68,7 @@ public class GEPPrograms {
 		ModelGroup.PROGRAMS.add(new SmelteryDoor(0));
 	}
 	
-	public static class SmelteryDoor implements ModelGroup.Program {
+	public static class SmelteryDoor implements Program {
 		
 		private boolean wasopen;
 		private int angle;
@@ -78,10 +78,10 @@ public class GEPPrograms {
 		}
 		
 		@Override
-		public String getId(){ return "gep:smeltery_doors"; }
+		public String id(){ return "gep:smeltery_doors"; }
 
 		@Override
-		public void preRender(ModelGroup list, ModelRenderData data){
+		public void pre(ModelGroup list, ModelRenderData data){
 			if(data.tile == null) return;
 			MultiBlockData multidata = ((MultiblockTickableTE)data.tile).getMultiBlockData();
 			if(multidata != null && multidata.getScript() != null && ((SmelteryScript)multidata.getScript()).isOpen()){
@@ -91,7 +91,7 @@ public class GEPPrograms {
 		}
 
 		@Override
-		public void postRender(ModelGroup list, ModelRenderData data){
+		public void post(ModelGroup list, ModelRenderData data){
 			if(wasopen){
 				list.rotate(0, 0, 0, true);
 				wasopen = false;
@@ -99,7 +99,7 @@ public class GEPPrograms {
 		}
 		
 		@Override
-		public ModelGroup.Program parse(String[] args){
+		public Program parse(String[] args){
 			return new SmelteryDoor(Integer.parseInt(args[0]));
 		}
 		
