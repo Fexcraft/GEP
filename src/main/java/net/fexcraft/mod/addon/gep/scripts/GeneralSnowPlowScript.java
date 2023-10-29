@@ -1,21 +1,20 @@
 package net.fexcraft.mod.addon.gep.scripts;
 
-import static net.fexcraft.mod.fvtm.util.AnotherUtil.toV3;
-
 import java.util.ArrayList;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import net.fexcraft.lib.common.json.JsonUtil;
-import net.fexcraft.mod.uni.Pos;
+import net.fexcraft.lib.common.math.V3D;
 import net.fexcraft.mod.fvtm.data.Seat;
 import net.fexcraft.mod.fvtm.data.vehicle.VehicleData;
 import net.fexcraft.mod.fvtm.data.vehicle.VehicleEntity;
 import net.fexcraft.mod.fvtm.data.vehicle.VehicleScript;
 import net.fexcraft.mod.fvtm.sys.uni.GenericVehicle;
 import net.fexcraft.mod.fvtm.sys.uni.KeyPress;
-import net.fexcraft.mod.fvtm.util.Axes;
+import net.fexcraft.mod.fvtm.util.Pivot;
+import net.fexcraft.mod.uni.Pos;
+import net.fexcraft.mod.uni.tag.TagCW;
 import net.minecraft.block.BlockSnow;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -25,12 +24,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.relauncher.Side;
 
 public class GeneralSnowPlowScript extends VehicleScript {
 	
-	private ArrayList<Vec3d> plow = new ArrayList<>();
+	private ArrayList<V3D> plow = new ArrayList<>();
 	private float width = 3, accuracy;
 	private String attribute;
 	private Pos pos, out;
@@ -55,9 +53,9 @@ public class GeneralSnowPlowScript extends VehicleScript {
 		attribute = obj.get("attribute").getAsString();
 		accuracy = JsonUtil.getIfExists(obj, "accuracy", 1f).floatValue();
 		for(float f = -(width / 2f) + accuracy / 2; f < width / 2; f += accuracy){
-			plow.add(toV3(pos).add(0, 0, f));
-			plow.add(toV3(pos).add(0, .5, f));
-			plow.add(toV3(pos).add(0, 1, f));
+			plow.add(pos.toV3D().add(0, 0, f));
+			plow.add(pos.toV3D().add(0, .5, f));
+			plow.add(pos.toV3D().add(0, 1, f));
 		}
 		if(obj.has("out")){
 			out = Pos.fromJson(obj.get("out"), true);
@@ -84,8 +82,9 @@ public class GeneralSnowPlowScript extends VehicleScript {
         BlockPos bpos;
         int accumulated = 0;
     	IBlockState state = null;
-        for(Vec3d vec : plow){
-        	bpos = new BlockPos(calculate(vehicle.getRotPoint().getAxes(), entity, vec));
+        for(V3D vec : plow){
+			V3D cal = calculate(vehicle.getRotPoint().getPivot(), entity, vec);
+        	bpos = new BlockPos(cal.x, cal.y, cal.z);
         	state = entity.world.getBlockState(bpos);
         	if(state.getBlock() == Blocks.AIR) continue; 
         	if(state.getMaterial() == Material.SNOW){
@@ -98,7 +97,8 @@ public class GeneralSnowPlowScript extends VehicleScript {
         }
         if(!accumulate || accumulated < 0) return;
         for(int i = -1; i < width && accumulated > 0; i++){
-        	bpos = new BlockPos(calculate(vehicle.getRotPoint().getAxes(), entity, toV3(out).add(0, i, 0)));
+			V3D cal = calculate(vehicle.getRotPoint().getPivot(), entity, out.toV3D().add(0, i, 0));
+        	bpos = new BlockPos(cal.x, cal.y, cal.z);
         	state = entity.world.getBlockState(bpos);
         	boolean snow = state.getBlock() instanceof BlockSnow;
         	if(snow) accumulated += state.getBlock().getMetaFromState(state);
@@ -109,18 +109,18 @@ public class GeneralSnowPlowScript extends VehicleScript {
         }
 	}
 
-    private Vec3d calculate(Axes axes, Entity ent, Vec3d vec){
-        Vec3d rel = axes.get_vector(vec);
-        return new Vec3d(ent.posX + rel.x, ent.posY + rel.y, ent.posZ + rel.z);
+    private V3D calculate(Pivot axes, Entity ent, V3D vec){
+        V3D rel = axes.get_vector(vec);
+        return new V3D(ent.posX + rel.x, ent.posY + rel.y, ent.posZ + rel.z);
     }
 
 	@Override
-	public VehicleScript read(VehicleData data, NBTTagCompound compound){
+	public VehicleScript load(VehicleData data, TagCW compound){
 		return this;
 	}
 
 	@Override
-	public NBTTagCompound write(VehicleData data, NBTTagCompound compound){
+	public TagCW save(VehicleData data, TagCW compound){
 		return null;
 	}
 
