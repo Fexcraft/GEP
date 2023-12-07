@@ -3,7 +3,13 @@
     "Addon": "fvtm:gep",
     "Name": "Pizza Oven",
     "Description": "&7Original Pizza Oven from &2FRSM&7!\n&9&o16Rot Edition",
-    "Model": "baked|gep:models/block/pizza_oven.fmf",
+    "Model": "gep:models/block/pizza_oven.fmf",
+    "ModelData":{
+    	"Programs":[
+    		"primary fvtm:rgb_primary"
+    	]
+    },
+    "Texture": "gep:textures/block/pizza_oven.png",
     "BlockType": "GENERIC_16ROT",
     "AABBs":{
     	"normal": [ 0.0, 0.0, 0.0, 1.0, 0.5625, 1.0 ]
