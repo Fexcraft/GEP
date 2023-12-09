@@ -2,7 +2,10 @@
     "RegistryName": "gep:pizza_oven2",
     "Addon": "fvtm:gep",
     "Name": "Pizza Oven",
-    "Description": "&7Original Pizza Oven from &2FRSM&7!\n&9&o16Rot Edition",
+    "Description": [
+    	"&7Original Pizza Oven from &2FRSM&7!",
+    	"&9&o16Rot Edition"
+    ],
     "Model": "gep:models/block/pizza_oven.fmf",
     "ModelData":{
     	"Programs":[
