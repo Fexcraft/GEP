@@ -1,6 +1,6 @@
 {
-    "RegistryName": "gep:cap",
-    "Addon": "fvtm:gep",
+    "ID": "cap",
+    "Addon": "gep",
     "Name": "Generic Brown Cap",
     "Description": [
         "&oAn original made with finest fabric."
@@ -10,7 +10,7 @@
     "Texture": "gep:textures/clothes/cap.png",
     "Model": "gep:models/cloth/cap.fmf",
     "ModelData":{
-		"SetGroupAs": "cap head 0 25 0",
+		"SetGroupAs": "cap head 0 1.5625 0",
 		"ItemScale": 0.125
 	}
 }
