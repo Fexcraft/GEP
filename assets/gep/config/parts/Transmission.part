@@ -4,5 +4,7 @@
     "Name": "Generic Transmission",
     "Model": "null",
     "Category": "transmission",
-    "Function": "fvtm:transmission"
+	"Functions": {
+		"fvtm:transmission": {}
+	}
 }
