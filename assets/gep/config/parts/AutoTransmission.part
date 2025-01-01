@@ -4,8 +4,9 @@
     "Name": "Generic Automatic Transmission",
     "Model": "null",
     "Category": "transmission",
-    "Function": {
-    	"id": "fvtm:transmission",
-    	"automatic": true
-    }
+	"Functions": {
+		"fvtm:transmission": {
+    		"automatic": true
+		}
+	}
 }
