@@ -2,7 +2,7 @@
     "Type": "fcl:crafting",
     "Category": "recipe.gep.parts",
     "Result": {
-        "id": "gep:engine_petrol",
+        "id": "gep:engine_diesel",
         "amount": 1
     },
     "Components":{
