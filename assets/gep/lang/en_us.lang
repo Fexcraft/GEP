@@ -3,12 +3,8 @@
 ##Contributors:
 #> FEX___96
 #>
-#>
-#>
-
 # Other
 itemGroup.fvtm:gep=General Essentials Pack
-
 # Items (/Parts)
 item.gep:engine_diesel.name=Diesel General Purpose Engine
 item.gep:engine_petrol.name=Petrol General Purpose Engine
@@ -41,7 +37,6 @@ item.gep:license_plate_holder_12x3.name=12x3 License Plate Holder
 item.gep:cap.name=GEP Cap
 item.gep:impact_0.name=Generic Impact Wrench
 item.gep:impact_1.name=Generic Impact Wrench
-
 # Blocks
 tile.gep:pizza_oven.name=FRSM Pizza Oven
 tile.gep:pizza_oven2.name=FRSM Pizza Oven
@@ -59,13 +54,11 @@ tile.gep:rolling_mill_core.name=Rolling Mill (Core)
 tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
 tile.gep:oil_pump_core.name=Oil Pump (Core)
 tile.gep:barrel_24.name=Barrel (T24)
-
 # Multiblocks
 item.gep:smeltery.name=Smeltery
 item.gep:crusher.name=Crusher
 item.gep:rolling_mill.name=Rolling Mill
 item.gep:oilpump.name=Oil Pump
-
 # Recipe Groups (FCL)
 gep.recipes.machines=GEP Machines/Blocks
 gep.recipes.materials=GEP Materials
@@ -74,3 +67,12 @@ gep.recipes.rails=30px Rails
 gep.recipes.clothes=GEP Clothes
 gep.recipes.car_parts=GEP Car Parts
 gep.recipes.misc=GEP Misc Recipes
+#info=File generated via FMT.
+item.gep:chassis_car.name=Generic Car Chassis
+item.gep:chassis_autobus.name=Generic Autobus Chassis
+item.gep:chassis_truck.name=Generic Semi-Truck Chassis
+item.gep:door_set.name=Door Assembly Set
+item.gep:chassis_components.name=Chassis Components
+item.gep:lights_set.name=Lights Assembly Set
+item.gep:electric_components.name=Electronic Components
+item.gep:seat_set.name=Seat Assembly Set
