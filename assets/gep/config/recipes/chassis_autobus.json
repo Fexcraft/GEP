@@ -1,0 +1,19 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.chassis",
+    "Result": {
+        "id": "gep:chassis_autobus",
+        "amount": 1
+    },
+    "Components":{
+        "minecraft:iron_block":{
+            "amount": 7
+        },
+        "gep:rubber":{
+            "amount": 16
+        },
+        "gep:electric_components":{
+            "amount": 6
+        }
+    }
+}

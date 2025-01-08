@@ -1,0 +1,16 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.parts",
+    "Result": {
+        "id": "gep:engine_petrol",
+        "amount": 1
+    },
+    "Components":{
+        "minecraft:iron_block":{
+            "amount": 1
+        },
+        "gep:electric_components":{
+            "amount": 1
+        }
+    }
+}

@@ -60,14 +60,11 @@ item.gep:crusher.name=Crusher
 item.gep:rolling_mill.name=Rolling Mill
 item.gep:oilpump.name=Oil Pump
 # Recipe Groups (FCL)
-gep.recipes.machines=GEP Machines/Blocks
-gep.recipes.materials=GEP Materials
-gep.recipes.containers=GEP Containers/Barrels
-gep.recipes.rails=30px Rails
-gep.recipes.clothes=GEP Clothes
-gep.recipes.car_parts=GEP Car Parts
-gep.recipes.misc=GEP Misc Recipes
-#info=File generated via FMT.
+recipe.gep.general=GEP General Recipes
+recipe.gep.chassis=GEP Vehicle Chassis
+recipe.gep.components=GEP Vehicle Components
+recipe.gep.parts=GEP Vehicle Parts
+//
 item.gep:chassis_car.name=Generic Car Chassis
 item.gep:chassis_autobus.name=Generic Autobus Chassis
 item.gep:chassis_truck.name=Generic Semi-Truck Chassis

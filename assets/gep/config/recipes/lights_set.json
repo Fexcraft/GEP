@@ -1,0 +1,19 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.components",
+    "Result": {
+        "id": "gep:lights_set",
+        "amount": 1
+    },
+    "Components":{
+        "minecraft:glass_pane":{
+            "amount": 1
+        },
+        "minecraft:redstone":{
+            "amount": 2
+        },
+        "minecraft:glowstone_dust":{
+            "amount": 4
+        }
+    }
+}

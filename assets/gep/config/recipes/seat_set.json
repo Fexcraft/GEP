@@ -1,0 +1,24 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.components",
+    "Result": {
+        "id": "gep:seat_set",
+        "amount": 1
+    },
+    "Components":{
+        "plankWood":{
+            "type": "ore",
+            "amount": 4
+        },
+        "minecraft:planks":{
+            "type": "tag",
+            "amount": 4
+        },
+        "minecraft:leather":{
+            "amount": 2
+        },
+        "minecraft:lever":{
+            "amount": 1
+        }
+    }
+}

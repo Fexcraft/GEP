@@ -1,0 +1,19 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.components",
+    "Result": {
+        "id": "gep:electric_components",
+        "amount": 4
+    },
+    "Components":{
+        "minecraft:glass_pane":{
+            "amount": 1
+        },
+        "minecraft:redstone":{
+            "amount": 4
+        },
+        "minecraft:glowstone_dust":{
+            "amount": 1
+        }
+    }
+}
