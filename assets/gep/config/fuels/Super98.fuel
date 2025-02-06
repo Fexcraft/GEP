@@ -5,5 +5,9 @@
     "Description": "GEP SUPER98",
     "PrimaryGroup": "petrol",
     "SecondaryGroup": "super98",
-    "Quality": 0.98
+    "Quality": 0.98,
+    "Conversion":{
+        "gasoline": 1
+        "lava": 0.1
+    }
 }
