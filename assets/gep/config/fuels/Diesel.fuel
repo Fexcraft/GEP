@@ -5,5 +5,9 @@
     "Description": "GEP DIESEL",
     "PrimaryGroup": "diesel",
     "SecondaryGroup": "petrodiesel",
-    "Quality": 1.0
+    "Quality": 1.0,
+    "Conversion":{
+        "diesel": 1,
+        "lava": 0.1
+    }
 }
