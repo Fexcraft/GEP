@@ -64,6 +64,7 @@ recipe.gep.general=GEP General Recipes
 recipe.gep.chassis=GEP Vehicle Chassis
 recipe.gep.components=GEP Vehicle Components
 recipe.gep.parts=GEP Vehicle Parts
+recipe.gep.materials=GEP Materials/Containers
 //
 item.gep:chassis_car.name=Generic Car Chassis
 item.gep:chassis_autobus.name=Generic Autobus Chassis
