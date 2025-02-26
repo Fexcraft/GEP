@@ -1,5 +1,5 @@
 {
-    "RegistryName": "gep:diesel_canister",
+    "ID": "gep:diesel_canister",
     "Addon": "fvtm:gep",
     "Name": "GEP Diesel Canister",
     "MaxItemStackSize": 1,
