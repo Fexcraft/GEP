@@ -7,7 +7,7 @@
     "SecondaryGroup": "super95",
     "Quality": 0.95,
     "Conversion":{
-        "gasoline": 1
+        "gasoline": 1,
         "lava": 0.1
     }
 }
