@@ -55,6 +55,7 @@
     "recipe.gep.chassis": "GEP Vehicle Chassis",
     "recipe.gep.components": "GEP Vehicle Components",
     "recipe.gep.parts": "GEP Vehicle Parts",
+    "recipe.gep.materials": "GEP Materials/Containers",
     "//0": "//",
     "item.gep.chassis_car": "Generic Car Chassis",
     "item.gep.chassis_autobus": "Generic Autobus Chassis",
