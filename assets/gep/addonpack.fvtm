@@ -1,5 +1,5 @@
 {
-	"RegistryName": "fvtm:gep",
+	"ID": "fvtm:gep",
 	"Name": "General Essentials Pack",
 	"URL": "http://fexcraft.net/download?modid=addon-gep",
 	"UpdateID": "addon-gep",
@@ -8,7 +8,7 @@
 	"Authors": [
 		"01e4af9b-2a30-471e-addf-f6338ffce04b"
 	],
-	"Version": "3.2.2",
+	"Version": "3.2.3",
 	"CreativeTabs":{
 		"default": "gep:diesel_canister"
 	},
@@ -58,8 +58,5 @@
 			"mode": "<",
 			"condition": 12000
 		}
-	},
-	"GenerateLang": false,
-	"GenerateItemJson": false,
-	"GenerateItemIcon": false
+	}
 }
