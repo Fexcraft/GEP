@@ -1,0 +1,6 @@
+{ 
+    "model": { 
+        "type": "minecraft:model", 
+        "model": "gep:item/license_plate_12x3_generic"
+    }
+}
