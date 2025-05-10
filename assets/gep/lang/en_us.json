@@ -65,5 +65,5 @@
     "item.gep.electric_components": "ElectronicComponents", 
     "item.gep.seat_set": "SeatSet", 
     "//0": "//", 
-    "item.gep.default": "Default 30px Gauge"
+    "item.gep.standard": "30px Standard Gauge"
 }
