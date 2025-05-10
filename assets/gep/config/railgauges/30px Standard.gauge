@@ -1,0 +1,24 @@
+{ 
+    "ID": "standard", 
+    "Name": "30px Standard Gauge", 
+    "Addon": "gep"
+    "Model": "gep:models/gauge/standard.obj",
+    "ModelData":{
+        "TextureWidth": 16,
+        "TextureHeight": 16,
+        "TiesDistance": 1,
+        "Rails":{
+            "def": {
+                "scale": 0.0625,
+                "pos": [ 15, 2 ],
+                "size": [ 2, 2 ],
+                "mirror": true,
+                "v": [ 0, 2, 2 ]
+            }
+        }
+    },
+    "Width": 1.875,
+    "Height": 0.25,
+    "TiesTexture": "gep:textures/gauges/standard.png",
+    "RailTexture": "gep:textures/gauges/standard_rail.png"
+}
