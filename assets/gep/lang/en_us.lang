@@ -75,4 +75,4 @@ item.gep:lights_set.name=Lights Set
 item.gep:electric_components.name=ElectronicComponents
 item.gep:seat_set.name=SeatSet
 //0=//
-item.gep:default.name=Default 30px Gauge
+item.gep:standard.name=30px Standard Gauge
