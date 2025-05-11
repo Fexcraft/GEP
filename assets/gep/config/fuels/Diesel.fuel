@@ -8,6 +8,8 @@
     "Quality": 1.0,
     "Conversion":{
         "diesel": 1,
-        "lava": 0.1
+        "lava": 0.1,
+        "minecraft:coal": 0.5,
+        "minecraft:coal_block": 5
     }
 }
