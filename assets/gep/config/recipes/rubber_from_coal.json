@@ -1,0 +1,13 @@
+{
+    "Type": "fcl:crafting",
+    "Category": "recipe.gep.general",
+    "Result": {
+        "id": "gep:rubber",
+        "amount": 1
+    },
+    "Components":{
+        "minecraft:coal":{
+            "amount": 4
+        }
+    }
+}
