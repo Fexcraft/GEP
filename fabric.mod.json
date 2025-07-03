@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "gep",
+	"version": "x",
+	"name": "General Essentials Pack",
+	"description": "General Essential Parts & Other for FVTM",
+	"authors": [
+		"FEX___96"
+	],
+	"contact": {
+		"homepage": "https://fexcraft.net/",
+		"sources": "https://github.com/Fexcraft/GEP"
+	},
+	"license": "ARR",
+	"environment": "*",
+	"entrypoints": {},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "*",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
