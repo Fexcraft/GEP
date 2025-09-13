@@ -54,6 +54,7 @@ tile.gep:rolling_mill_core.name=Rolling Mill (Core)
 tile.gep:rolling_mill_belt.name=Rolling Mill (Belt)
 tile.gep:oil_pump_core.name=Oil Pump (Core)
 tile.gep:barrel_24.name=Barrel (T24)
+tile.gep:jack_stand.name=Jack Stand
 # Multiblocks
 item.gep:smeltery.name=Smeltery
 item.gep:crusher.name=Crusher
