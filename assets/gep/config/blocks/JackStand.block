@@ -1,0 +1,22 @@
+{
+    "Addon": "gep",
+    "ID": "jack_stand",
+    "BlockType": "JACK_STAND",
+    "Textures":[
+        "Default;gep:textures/block/jack_stand.png"
+    ]
+    "Model": "gep:models/block/jack_stand.fmf",
+    "ModelData":{
+        "Programs":[
+            "marker fvtm:vehicle_on_jack"
+            "stand fvtm:jack_stand"
+            "jack fvtm:jack_stand"
+        ]
+    }
+    "AABBs":{
+        "normal": [ 0.25, 0, 0.25, 0.75, 1, 0.75 ]
+    }
+    "CustomStates":{
+        "height": [ 0.5, 1 ]
+    }
+}
