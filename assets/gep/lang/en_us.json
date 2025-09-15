@@ -47,7 +47,7 @@
     "tile.gep:rolling_mill_belt.name": "Rolling Mill (Belt)", 
     "tile.gep:oil_pump_core.name": "Oil Pump (Core)", 
     "tile.gep:barrel_24.name": "Barrel (T24)", 
-    "tile.gep:jack_stand": "Jack Stand",
+    "block.gep.jack_stand": "Jack Stand",
     "item.gep.smeltery": "Smeltery", 
     "item.gep.crusher": "Crusher", 
     "item.gep.rolling_mill": "Rolling Mill", 
